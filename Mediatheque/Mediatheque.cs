@@ -15,6 +15,8 @@ namespace Mediatheque
         {
             documents = new Hashtable();
 
+            //hahaha
+
         }
 
         public void Ajouter(Document _doc){
