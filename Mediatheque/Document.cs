@@ -6,14 +6,28 @@ using System.Threading.Tasks;
 
 namespace Mediatheque
 {
-    class Document
+    public class Document
     {
-        public string id;
+        public string titre { get; set; }
+        public string path { get; set; }
+        public bool hasCopyright { get; set; }
 
-        public Document(string _id)
+        public Document(string _titre,string _path, bool _hasCopyright)
         {
-            id = _id;
+            titre = _titre;
+            path = _path;
+            hasCopyright = _hasCopyright;
         }
 
+        public void Modifier(string _titre, string _path, bool _hasCopyright)
+        {
+            titre = _titre;
+            path = _path;
+            hasCopyright = _hasCopyright;
+        }
+
+        public void Afficher()
+        {
+        }
     }
 }
