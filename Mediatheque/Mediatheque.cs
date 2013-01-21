@@ -7,18 +7,30 @@ using System.Threading.Tasks;
 
 namespace Mediatheque
 {
-    class Mediatheque
+    public class Mediatheque
     {
-        Hashtable documents;
+        ArrayList documents;
 
         public Mediatheque()
         {
-            documents = new Hashtable();
-
+            documents = new ArrayList();
         }
 
         public void Ajouter(Document _doc){
-            documents.Add(_doc.id, _doc);
+            if(!documents.Contains(_doc))
+            {
+                documents.Add(_doc);
+            }
         }
+
+        public void Supprimer(Document _doc)
+        {
+            if (documents.Contains(_doc))
+            {
+                documents.Remove(_doc);
+            }
+        }
+
+        
     }
 }
