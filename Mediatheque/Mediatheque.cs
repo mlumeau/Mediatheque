@@ -31,6 +31,9 @@ namespace Mediatheque
             }
         }
 
-        
+        public void Save()
+        {
+
+        }
     }
 }
