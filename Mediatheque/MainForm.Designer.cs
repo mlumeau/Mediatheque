@@ -47,28 +47,52 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.headerSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.allPage = new System.Windows.Forms.TabPage();
+            this.audioPage = new System.Windows.Forms.TabPage();
+            this.videoPage = new System.Windows.Forms.TabPage();
+            this.textPage = new System.Windows.Forms.TabPage();
+            this.mmPage = new System.Windows.Forms.TabPage();
+            this.allSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.allListBox = new System.Windows.Forms.ListBox();
+            this.audioSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.audioListBox = new System.Windows.Forms.ListBox();
+            this.videoSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.videoListBox = new System.Windows.Forms.ListBox();
+            this.textSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.textListBox = new System.Windows.Forms.ListBox();
+            this.mmSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.mmListBox = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerSplitContainer)).BeginInit();
+            this.headerSplitContainer.Panel1.SuspendLayout();
+            this.headerSplitContainer.Panel2.SuspendLayout();
+            this.headerSplitContainer.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.allPage.SuspendLayout();
+            this.audioPage.SuspendLayout();
+            this.videoPage.SuspendLayout();
+            this.textPage.SuspendLayout();
+            this.mmPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allSplitContainer)).BeginInit();
+            this.allSplitContainer.Panel1.SuspendLayout();
+            this.allSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.audioSplitContainer)).BeginInit();
+            this.audioSplitContainer.Panel1.SuspendLayout();
+            this.audioSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.videoSplitContainer)).BeginInit();
+            this.videoSplitContainer.Panel1.SuspendLayout();
+            this.videoSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textSplitContainer)).BeginInit();
+            this.textSplitContainer.Panel1.SuspendLayout();
+            this.textSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mmSplitContainer)).BeginInit();
+            this.mmSplitContainer.Panel1.SuspendLayout();
+            this.mmSplitContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // BottomToolStripPanel
@@ -111,7 +135,6 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Menu;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.editionToolStripMenuItem,
@@ -119,7 +142,7 @@
             this.aideToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(534, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(277, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -130,7 +153,7 @@
             this.toolStripSeparator,
             this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "&Fichier";
             // 
             // ouvrirToolStripMenuItem
@@ -160,7 +183,7 @@
             this.supprimerToolStripMenuItem,
             this.modifierToolStripMenuItem});
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
-            this.editionToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
+            this.editionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.editionToolStripMenuItem.Text = "&Edition";
             // 
             // sélectionnertoutToolStripMenuItem
@@ -188,7 +211,7 @@
             this.outilsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem});
             this.outilsToolStripMenuItem.Name = "outilsToolStripMenuItem";
-            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(50, 21);
+            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.outilsToolStripMenuItem.Text = "&Outils";
             // 
             // optionsToolStripMenuItem
@@ -202,7 +225,7 @@
             this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.àproposdeToolStripMenuItem});
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 21);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.aideToolStripMenuItem.Text = "&Aide";
             // 
             // àproposdeToolStripMenuItem
@@ -212,169 +235,284 @@
             this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.àproposdeToolStripMenuItem.Text = "À &propos de...";
             // 
-            // searchBox
+            // headerSplitContainer
             // 
-            this.searchBox.Location = new System.Drawing.Point(3, 3);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(137, 20);
-            this.searchBox.TabIndex = 0;
+            this.headerSplitContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerSplitContainer.IsSplitterFixed = true;
+            this.headerSplitContainer.Location = new System.Drawing.Point(0, 0);
+            this.headerSplitContainer.Name = "headerSplitContainer";
             // 
-            // searchButton
+            // headerSplitContainer.Panel1
             // 
-            this.searchButton.Location = new System.Drawing.Point(145, 0);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(87, 25);
-            this.searchButton.TabIndex = 1;
-            this.searchButton.Text = "Rechercher";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.headerSplitContainer.Panel1.Controls.Add(this.menuStrip1);
+            this.headerSplitContainer.Panel1MinSize = 232;
             // 
-            // splitContainer2
+            // headerSplitContainer.Panel2
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer2.IsSplitterFixed = true;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.menuStrip1);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.searchBox);
-            this.splitContainer2.Panel2.Controls.Add(this.searchButton);
-            this.splitContainer2.Size = new System.Drawing.Size(770, 25);
-            this.splitContainer2.SplitterDistance = 534;
-            this.splitContainer2.SplitterWidth = 1;
-            this.splitContainer2.TabIndex = 2;
+            this.headerSplitContainer.Panel2.Controls.Add(this.searchBox);
+            this.headerSplitContainer.Panel2.Controls.Add(this.searchButton);
+            this.headerSplitContainer.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.headerSplitContainer.Panel2MinSize = 0;
+            this.headerSplitContainer.Size = new System.Drawing.Size(739, 34);
+            this.headerSplitContainer.SplitterDistance = 277;
+            this.headerSplitContainer.SplitterWidth = 1;
+            this.headerSplitContainer.TabIndex = 2;
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 358);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 367);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(770, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(739, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // splitContainer3
+            // searchBox
             // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 25);
-            this.splitContainer3.Name = "splitContainer3";
+            this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBox.Location = new System.Drawing.Point(225, 7);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(137, 20);
+            this.searchBox.TabIndex = 4;
             // 
-            // splitContainer3.Panel1
+            // searchButton
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.tabControl1);
-            this.splitContainer3.Size = new System.Drawing.Size(770, 333);
-            this.splitContainer3.SplitterDistance = 563;
-            this.splitContainer3.TabIndex = 5;
+            this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchButton.Location = new System.Drawing.Point(368, 3);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(81, 26);
+            this.searchButton.TabIndex = 5;
+            this.searchButton.Text = "Rechercher";
+            this.searchButton.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.ItemSize = new System.Drawing.Size(20, 110);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Padding = new System.Drawing.Point(3, 3);
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(563, 333);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 0;
+            this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabControl.CausesValidation = false;
+            this.tabControl.Controls.Add(this.allPage);
+            this.tabControl.Controls.Add(this.audioPage);
+            this.tabControl.Controls.Add(this.videoPage);
+            this.tabControl.Controls.Add(this.textPage);
+            this.tabControl.Controls.Add(this.mmPage);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl.ItemSize = new System.Drawing.Size(20, 110);
+            this.tabControl.Location = new System.Drawing.Point(0, 34);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.tabControl.Multiline = true;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.Padding = new System.Drawing.Point(3, 3);
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(739, 333);
+            this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl.TabIndex = 5;
             // 
-            // tabPage2
+            // allPage
             // 
-            this.tabPage2.Controls.Add(this.listBox1);
-            this.tabPage2.Location = new System.Drawing.Point(116, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(443, 325);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.allPage.Controls.Add(this.allSplitContainer);
+            this.allPage.Location = new System.Drawing.Point(116, 4);
+            this.allPage.Name = "allPage";
+            this.allPage.Padding = new System.Windows.Forms.Padding(3);
+            this.allPage.Size = new System.Drawing.Size(619, 325);
+            this.allPage.TabIndex = 5;
+            this.allPage.Text = "Tous documents";
+            this.allPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // audioPage
             // 
-            this.tabPage3.Location = new System.Drawing.Point(116, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(443, 325);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.audioPage.Controls.Add(this.audioSplitContainer);
+            this.audioPage.Location = new System.Drawing.Point(116, 4);
+            this.audioPage.Name = "audioPage";
+            this.audioPage.Padding = new System.Windows.Forms.Padding(3);
+            this.audioPage.Size = new System.Drawing.Size(619, 325);
+            this.audioPage.TabIndex = 1;
+            this.audioPage.Text = "Audio";
+            this.audioPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // videoPage
             // 
-            this.tabPage4.Location = new System.Drawing.Point(116, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(443, 325);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.videoPage.Controls.Add(this.videoSplitContainer);
+            this.videoPage.Location = new System.Drawing.Point(116, 4);
+            this.videoPage.Name = "videoPage";
+            this.videoPage.Padding = new System.Windows.Forms.Padding(3);
+            this.videoPage.Size = new System.Drawing.Size(619, 325);
+            this.videoPage.TabIndex = 2;
+            this.videoPage.Text = "Video";
+            this.videoPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // textPage
             // 
-            this.tabPage5.Location = new System.Drawing.Point(116, 4);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(443, 325);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.textPage.Controls.Add(this.textSplitContainer);
+            this.textPage.Location = new System.Drawing.Point(116, 4);
+            this.textPage.Name = "textPage";
+            this.textPage.Padding = new System.Windows.Forms.Padding(3);
+            this.textPage.Size = new System.Drawing.Size(619, 325);
+            this.textPage.TabIndex = 3;
+            this.textPage.Text = "Textes";
+            this.textPage.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // mmPage
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(437, 319);
-            this.listBox1.TabIndex = 0;
+            this.mmPage.Controls.Add(this.mmSplitContainer);
+            this.mmPage.Location = new System.Drawing.Point(116, 4);
+            this.mmPage.Margin = new System.Windows.Forms.Padding(0);
+            this.mmPage.Name = "mmPage";
+            this.mmPage.Padding = new System.Windows.Forms.Padding(3);
+            this.mmPage.Size = new System.Drawing.Size(619, 325);
+            this.mmPage.TabIndex = 4;
+            this.mmPage.Text = "Multimédias";
+            this.mmPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // allSplitContainer
             // 
-            this.tabPage1.Location = new System.Drawing.Point(116, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(443, 325);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.allSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allSplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.allSplitContainer.Name = "allSplitContainer";
+            // 
+            // allSplitContainer.Panel1
+            // 
+            this.allSplitContainer.Panel1.Controls.Add(this.allListBox);
+            this.allSplitContainer.Size = new System.Drawing.Size(613, 319);
+            this.allSplitContainer.SplitterDistance = 443;
+            this.allSplitContainer.TabIndex = 0;
+            // 
+            // allListBox
+            // 
+            this.allListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allListBox.FormattingEnabled = true;
+            this.allListBox.Location = new System.Drawing.Point(0, 0);
+            this.allListBox.Name = "allListBox";
+            this.allListBox.Size = new System.Drawing.Size(443, 319);
+            this.allListBox.TabIndex = 2;
+            // 
+            // audioSplitContainer
+            // 
+            this.audioSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.audioSplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.audioSplitContainer.Name = "audioSplitContainer";
+            // 
+            // audioSplitContainer.Panel1
+            // 
+            this.audioSplitContainer.Panel1.Controls.Add(this.audioListBox);
+            this.audioSplitContainer.Size = new System.Drawing.Size(613, 319);
+            this.audioSplitContainer.SplitterDistance = 443;
+            this.audioSplitContainer.TabIndex = 1;
+            // 
+            // audioListBox
+            // 
+            this.audioListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.audioListBox.FormattingEnabled = true;
+            this.audioListBox.Location = new System.Drawing.Point(0, 0);
+            this.audioListBox.Name = "audioListBox";
+            this.audioListBox.Size = new System.Drawing.Size(443, 319);
+            this.audioListBox.TabIndex = 2;
+            // 
+            // videoSplitContainer
+            // 
+            this.videoSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.videoSplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.videoSplitContainer.Name = "videoSplitContainer";
+            // 
+            // videoSplitContainer.Panel1
+            // 
+            this.videoSplitContainer.Panel1.Controls.Add(this.videoListBox);
+            this.videoSplitContainer.Size = new System.Drawing.Size(613, 319);
+            this.videoSplitContainer.SplitterDistance = 443;
+            this.videoSplitContainer.TabIndex = 1;
+            // 
+            // videoListBox
+            // 
+            this.videoListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.videoListBox.FormattingEnabled = true;
+            this.videoListBox.Location = new System.Drawing.Point(0, 0);
+            this.videoListBox.Name = "videoListBox";
+            this.videoListBox.Size = new System.Drawing.Size(443, 319);
+            this.videoListBox.TabIndex = 2;
+            // 
+            // textSplitContainer
+            // 
+            this.textSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textSplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.textSplitContainer.Name = "textSplitContainer";
+            // 
+            // textSplitContainer.Panel1
+            // 
+            this.textSplitContainer.Panel1.Controls.Add(this.textListBox);
+            this.textSplitContainer.Size = new System.Drawing.Size(613, 319);
+            this.textSplitContainer.SplitterDistance = 443;
+            this.textSplitContainer.TabIndex = 1;
+            // 
+            // textListBox
+            // 
+            this.textListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textListBox.FormattingEnabled = true;
+            this.textListBox.Location = new System.Drawing.Point(0, 0);
+            this.textListBox.Name = "textListBox";
+            this.textListBox.Size = new System.Drawing.Size(443, 319);
+            this.textListBox.TabIndex = 2;
+            // 
+            // mmSplitContainer
+            // 
+            this.mmSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mmSplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.mmSplitContainer.Name = "mmSplitContainer";
+            // 
+            // mmSplitContainer.Panel1
+            // 
+            this.mmSplitContainer.Panel1.Controls.Add(this.mmListBox);
+            this.mmSplitContainer.Size = new System.Drawing.Size(613, 319);
+            this.mmSplitContainer.SplitterDistance = 443;
+            this.mmSplitContainer.TabIndex = 1;
+            // 
+            // mmListBox
+            // 
+            this.mmListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mmListBox.FormattingEnabled = true;
+            this.mmListBox.Location = new System.Drawing.Point(0, 0);
+            this.mmListBox.Name = "mmListBox";
+            this.mmListBox.Size = new System.Drawing.Size(443, 319);
+            this.mmListBox.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 380);
-            this.Controls.Add(this.splitContainer3);
+            this.ClientSize = new System.Drawing.Size(739, 389);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.splitContainer2);
+            this.Controls.Add(this.headerSplitContainer);
+            this.MinimumSize = new System.Drawing.Size(500, 375);
             this.Name = "MainForm";
             this.Text = "Médiathèque";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.headerSplitContainer.Panel1.ResumeLayout(false);
+            this.headerSplitContainer.Panel1.PerformLayout();
+            this.headerSplitContainer.Panel2.ResumeLayout(false);
+            this.headerSplitContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerSplitContainer)).EndInit();
+            this.headerSplitContainer.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
+            this.allPage.ResumeLayout(false);
+            this.audioPage.ResumeLayout(false);
+            this.videoPage.ResumeLayout(false);
+            this.textPage.ResumeLayout(false);
+            this.mmPage.ResumeLayout(false);
+            this.allSplitContainer.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.allSplitContainer)).EndInit();
+            this.allSplitContainer.ResumeLayout(false);
+            this.audioSplitContainer.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.audioSplitContainer)).EndInit();
+            this.audioSplitContainer.ResumeLayout(false);
+            this.videoSplitContainer.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.videoSplitContainer)).EndInit();
+            this.videoSplitContainer.ResumeLayout(false);
+            this.textSplitContainer.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textSplitContainer)).EndInit();
+            this.textSplitContainer.ResumeLayout(false);
+            this.mmSplitContainer.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mmSplitContainer)).EndInit();
+            this.mmSplitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,18 +538,27 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem àproposdeToolStripMenuItem;
-        private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.SplitContainer headerSplitContainer;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage allPage;
+        private System.Windows.Forms.TabPage audioPage;
+        private System.Windows.Forms.TabPage videoPage;
+        private System.Windows.Forms.TabPage textPage;
+        private System.Windows.Forms.TabPage mmPage;
+        private System.Windows.Forms.SplitContainer allSplitContainer;
+        private System.Windows.Forms.ListBox allListBox;
+        private System.Windows.Forms.SplitContainer audioSplitContainer;
+        private System.Windows.Forms.ListBox audioListBox;
+        private System.Windows.Forms.SplitContainer videoSplitContainer;
+        private System.Windows.Forms.ListBox videoListBox;
+        private System.Windows.Forms.SplitContainer textSplitContainer;
+        private System.Windows.Forms.ListBox textListBox;
+        private System.Windows.Forms.SplitContainer mmSplitContainer;
+        private System.Windows.Forms.ListBox mmListBox;
+
 
     }
 }
