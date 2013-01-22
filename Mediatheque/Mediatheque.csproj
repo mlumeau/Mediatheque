@@ -64,6 +64,12 @@
     <Compile Include="Audio.cs" />
     <Compile Include="Article.cs" />
     <Compile Include="Livre.cs" />
+    <Compile Include="ModificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificationForm.Designer.cs">
+      <DependentUpon>ModificationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Video.cs" />
     <Compile Include="Multimedia.cs" />
     <Compile Include="Texte.cs" />
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificationForm.resx">
+      <DependentUpon>ModificationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
