@@ -260,7 +260,7 @@
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(228, 7);
+            this.searchBox.Location = new System.Drawing.Point(231, 7);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(137, 20);
             this.searchBox.TabIndex = 4;
@@ -268,7 +268,7 @@
             // searchButton
             // 
             this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchButton.Location = new System.Drawing.Point(371, 3);
+            this.searchButton.Location = new System.Drawing.Point(374, 3);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(81, 26);
             this.searchButton.TabIndex = 5;
@@ -344,10 +344,10 @@
             // audioPage
             // 
             this.audioPage.Controls.Add(this.audioSplitContainer);
-            this.audioPage.Location = new System.Drawing.Point(47, 4);
+            this.audioPage.Location = new System.Drawing.Point(116, 4);
             this.audioPage.Name = "audioPage";
             this.audioPage.Padding = new System.Windows.Forms.Padding(3);
-            this.audioPage.Size = new System.Drawing.Size(669, 322);
+            this.audioPage.Size = new System.Drawing.Size(600, 322);
             this.audioPage.TabIndex = 1;
             this.audioPage.Text = "Audio";
             this.audioPage.UseVisualStyleBackColor = true;
@@ -361,8 +361,8 @@
             // audioSplitContainer.Panel1
             // 
             this.audioSplitContainer.Panel1.Controls.Add(this.audioListBox);
-            this.audioSplitContainer.Size = new System.Drawing.Size(663, 316);
-            this.audioSplitContainer.SplitterDistance = 479;
+            this.audioSplitContainer.Size = new System.Drawing.Size(594, 316);
+            this.audioSplitContainer.SplitterDistance = 429;
             this.audioSplitContainer.TabIndex = 1;
             // 
             // audioListBox
@@ -371,16 +371,16 @@
             this.audioListBox.FormattingEnabled = true;
             this.audioListBox.Location = new System.Drawing.Point(0, 0);
             this.audioListBox.Name = "audioListBox";
-            this.audioListBox.Size = new System.Drawing.Size(479, 316);
+            this.audioListBox.Size = new System.Drawing.Size(429, 316);
             this.audioListBox.TabIndex = 2;
             // 
             // videoPage
             // 
             this.videoPage.Controls.Add(this.videoSplitContainer);
-            this.videoPage.Location = new System.Drawing.Point(70, 4);
+            this.videoPage.Location = new System.Drawing.Point(116, 4);
             this.videoPage.Name = "videoPage";
             this.videoPage.Padding = new System.Windows.Forms.Padding(3);
-            this.videoPage.Size = new System.Drawing.Size(646, 322);
+            this.videoPage.Size = new System.Drawing.Size(600, 322);
             this.videoPage.TabIndex = 2;
             this.videoPage.Text = "Video";
             this.videoPage.UseVisualStyleBackColor = true;
@@ -394,8 +394,8 @@
             // videoSplitContainer.Panel1
             // 
             this.videoSplitContainer.Panel1.Controls.Add(this.videoListBox);
-            this.videoSplitContainer.Size = new System.Drawing.Size(640, 316);
-            this.videoSplitContainer.SplitterDistance = 462;
+            this.videoSplitContainer.Size = new System.Drawing.Size(594, 316);
+            this.videoSplitContainer.SplitterDistance = 428;
             this.videoSplitContainer.TabIndex = 1;
             // 
             // videoListBox
@@ -404,16 +404,16 @@
             this.videoListBox.FormattingEnabled = true;
             this.videoListBox.Location = new System.Drawing.Point(0, 0);
             this.videoListBox.Name = "videoListBox";
-            this.videoListBox.Size = new System.Drawing.Size(462, 316);
+            this.videoListBox.Size = new System.Drawing.Size(428, 316);
             this.videoListBox.TabIndex = 2;
             // 
             // textPage
             // 
             this.textPage.Controls.Add(this.textSplitContainer);
-            this.textPage.Location = new System.Drawing.Point(93, 4);
+            this.textPage.Location = new System.Drawing.Point(116, 4);
             this.textPage.Name = "textPage";
             this.textPage.Padding = new System.Windows.Forms.Padding(3);
-            this.textPage.Size = new System.Drawing.Size(623, 322);
+            this.textPage.Size = new System.Drawing.Size(600, 322);
             this.textPage.TabIndex = 3;
             this.textPage.Text = "Textes";
             this.textPage.UseVisualStyleBackColor = true;
@@ -427,8 +427,8 @@
             // textSplitContainer.Panel1
             // 
             this.textSplitContainer.Panel1.Controls.Add(this.textListBox);
-            this.textSplitContainer.Size = new System.Drawing.Size(617, 316);
-            this.textSplitContainer.SplitterDistance = 445;
+            this.textSplitContainer.Size = new System.Drawing.Size(594, 316);
+            this.textSplitContainer.SplitterDistance = 428;
             this.textSplitContainer.TabIndex = 1;
             // 
             // textListBox
@@ -437,7 +437,7 @@
             this.textListBox.FormattingEnabled = true;
             this.textListBox.Location = new System.Drawing.Point(0, 0);
             this.textListBox.Name = "textListBox";
-            this.textListBox.Size = new System.Drawing.Size(445, 316);
+            this.textListBox.Size = new System.Drawing.Size(428, 316);
             this.textListBox.TabIndex = 2;
             // 
             // mmPage
@@ -485,6 +485,7 @@
             this.MinimumSize = new System.Drawing.Size(500, 375);
             this.Name = "MainForm";
             this.Text = "Médiathèque";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.headerSplitContainer.Panel1.ResumeLayout(false);

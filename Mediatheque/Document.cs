@@ -8,11 +8,15 @@ namespace Mediatheque
 {
     public abstract class Document
     {
+       
         public string titre { get; set; }
         public string path { get; set; }
         public bool hasCopyright { get; set; }
+        public Type type { get; set; }
 
-        public Document(string _titre, string _path, bool _hasCopyright)
+        public Document() { }
+
+        public Document(string _titre="", string _path="", bool _hasCopyright=false)
         {
             titre = _titre;
             path = _path;

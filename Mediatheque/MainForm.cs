@@ -50,5 +50,9 @@ namespace Mediatheque
             _stringFlags.LineAlignment = StringAlignment.Center;
             g.DrawString(_tabPage.Text, SystemFonts.DefaultFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

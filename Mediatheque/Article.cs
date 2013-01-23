@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Mediatheque
 {
-    class Article : Texte
+    public class Article : Texte
     {
 
         public string numEdition { get; set; }
         public string editeur { get; set; }
 
-
+        public Article() { }
         public Article(string _titre, string _path, bool _hasCopyright, string _numEdition, string _editeur) 
             : base(_titre,_path,_hasCopyright)
         {

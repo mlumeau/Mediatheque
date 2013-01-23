@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Mediatheque
 {
-    class Texte : Document, Imprimable
+    public class Texte : Document, Imprimable
     {
+        public Texte() { }
+
         public Texte(string _titre, string _path, bool _hasCopyright)
-            : base(_titre,_path,_hasCopyright){}
+            : base(_titre, _path, _hasCopyright) { type = Type.TEXTE; }
 
         public override void Afficher()
         {
