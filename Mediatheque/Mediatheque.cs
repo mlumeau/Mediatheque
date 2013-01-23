@@ -9,11 +9,11 @@ namespace Mediatheque
 {
     public class Mediatheque
     {
-        ArrayList documents;
+        List<Document> documents;
 
         public Mediatheque()
         {
-            documents = new ArrayList();
+            documents = new List<Document>();
         }
 
         public void Ajouter(Document _doc){
