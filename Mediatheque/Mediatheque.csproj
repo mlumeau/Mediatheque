@@ -67,6 +67,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjoutAudioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutAudioForm.Designer.cs">
+      <DependentUpon>AjoutAudioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutVideoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutVideoForm.Designer.cs">
+      <DependentUpon>AjoutVideoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Audio.cs" />
     <Compile Include="Article.cs" />
     <Compile Include="Livre.cs" />
@@ -90,6 +102,12 @@
     <Compile Include="Mediatheque.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AjoutAudioForm.resx">
+      <DependentUpon>AjoutAudioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutVideoForm.resx">
+      <DependentUpon>AjoutVideoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

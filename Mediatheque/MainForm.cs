@@ -54,5 +54,18 @@ namespace Mediatheque
         private void MainForm_Load(object sender, EventArgs e)
         {
         }
+
+        private void audioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AjoutAudioForm af = new AjoutAudioForm();
+            af.Show();
+        }
+
+        private void vidéoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AjoutVideoForm vf = new AjoutVideoForm();
+            vf.Show();
+        }
+
     }
 }

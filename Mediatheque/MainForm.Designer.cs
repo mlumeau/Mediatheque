@@ -36,17 +36,13 @@
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sélectionnertoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.headerSplitContainer = new System.Windows.Forms.SplitContainer();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
@@ -67,6 +63,16 @@
             this.mmPage = new System.Windows.Forms.TabPage();
             this.mmSplitContainer = new System.Windows.Forms.SplitContainer();
             this.mmListBox = new System.Windows.Forms.ListBox();
+            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vidéoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.multimédiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.texteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.articleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerSplitContainer)).BeginInit();
             this.headerSplitContainer.Panel1.SuspendLayout();
@@ -156,15 +162,6 @@
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "&Fichier";
             // 
-            // ouvrirToolStripMenuItem
-            // 
-            this.ouvrirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ouvrirToolStripMenuItem.Image")));
-            this.ouvrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.ouvrirToolStripMenuItem.Text = "&Ajouter un document...";
-            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
@@ -192,20 +189,6 @@
             this.sélectionnertoutToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.sélectionnertoutToolStripMenuItem.Text = "Sélectio&nner tout";
             // 
-            // supprimerToolStripMenuItem
-            // 
-            this.supprimerToolStripMenuItem.Image = global::Mediatheque.Properties.Resources.deleteToolStripButton;
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
-            // 
-            // modifierToolStripMenuItem
-            // 
-            this.modifierToolStripMenuItem.Image = global::Mediatheque.Properties.Resources.propertiesButton;
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.modifierToolStripMenuItem.Text = "Modifier";
-            // 
             // outilsToolStripMenuItem
             // 
             this.outilsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -227,13 +210,6 @@
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.aideToolStripMenuItem.Text = "&Aide";
-            // 
-            // àproposdeToolStripMenuItem
-            // 
-            this.àproposdeToolStripMenuItem.Image = global::Mediatheque.Properties.Resources.helpToolStripMenuItem;
-            this.àproposdeToolStripMenuItem.Name = "àproposdeToolStripMenuItem";
-            this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.àproposdeToolStripMenuItem.Text = "À &propos de...";
             // 
             // headerSplitContainer
             // 
@@ -260,7 +236,7 @@
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(231, 7);
+            this.searchBox.Location = new System.Drawing.Point(240, 7);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(137, 20);
             this.searchBox.TabIndex = 4;
@@ -268,7 +244,7 @@
             // searchButton
             // 
             this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchButton.Location = new System.Drawing.Point(374, 3);
+            this.searchButton.Location = new System.Drawing.Point(383, 3);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(81, 26);
             this.searchButton.TabIndex = 5;
@@ -361,8 +337,8 @@
             // audioSplitContainer.Panel1
             // 
             this.audioSplitContainer.Panel1.Controls.Add(this.audioListBox);
-            this.audioSplitContainer.Size = new System.Drawing.Size(594, 316);
-            this.audioSplitContainer.SplitterDistance = 429;
+            this.audioSplitContainer.Size = new System.Drawing.Size(663, 316);
+            this.audioSplitContainer.SplitterDistance = 478;
             this.audioSplitContainer.TabIndex = 1;
             // 
             // audioListBox
@@ -371,7 +347,7 @@
             this.audioListBox.FormattingEnabled = true;
             this.audioListBox.Location = new System.Drawing.Point(0, 0);
             this.audioListBox.Name = "audioListBox";
-            this.audioListBox.Size = new System.Drawing.Size(429, 316);
+            this.audioListBox.Size = new System.Drawing.Size(478, 316);
             this.audioListBox.TabIndex = 2;
             // 
             // videoPage
@@ -394,8 +370,8 @@
             // videoSplitContainer.Panel1
             // 
             this.videoSplitContainer.Panel1.Controls.Add(this.videoListBox);
-            this.videoSplitContainer.Size = new System.Drawing.Size(594, 316);
-            this.videoSplitContainer.SplitterDistance = 428;
+            this.videoSplitContainer.Size = new System.Drawing.Size(640, 316);
+            this.videoSplitContainer.SplitterDistance = 461;
             this.videoSplitContainer.TabIndex = 1;
             // 
             // videoListBox
@@ -404,7 +380,7 @@
             this.videoListBox.FormattingEnabled = true;
             this.videoListBox.Location = new System.Drawing.Point(0, 0);
             this.videoListBox.Name = "videoListBox";
-            this.videoListBox.Size = new System.Drawing.Size(428, 316);
+            this.videoListBox.Size = new System.Drawing.Size(461, 316);
             this.videoListBox.TabIndex = 2;
             // 
             // textPage
@@ -427,8 +403,8 @@
             // textSplitContainer.Panel1
             // 
             this.textSplitContainer.Panel1.Controls.Add(this.textListBox);
-            this.textSplitContainer.Size = new System.Drawing.Size(594, 316);
-            this.textSplitContainer.SplitterDistance = 428;
+            this.textSplitContainer.Size = new System.Drawing.Size(617, 316);
+            this.textSplitContainer.SplitterDistance = 444;
             this.textSplitContainer.TabIndex = 1;
             // 
             // textListBox
@@ -437,7 +413,7 @@
             this.textListBox.FormattingEnabled = true;
             this.textListBox.Location = new System.Drawing.Point(0, 0);
             this.textListBox.Name = "textListBox";
-            this.textListBox.Size = new System.Drawing.Size(428, 316);
+            this.textListBox.Size = new System.Drawing.Size(444, 316);
             this.textListBox.TabIndex = 2;
             // 
             // mmPage
@@ -473,6 +449,82 @@
             this.mmListBox.Name = "mmListBox";
             this.mmListBox.Size = new System.Drawing.Size(429, 316);
             this.mmListBox.TabIndex = 2;
+            // 
+            // ouvrirToolStripMenuItem
+            // 
+            this.ouvrirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.audioToolStripMenuItem,
+            this.vidéoToolStripMenuItem,
+            this.multimédiaToolStripMenuItem,
+            this.texteToolStripMenuItem});
+            this.ouvrirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ouvrirToolStripMenuItem.Image")));
+            this.ouvrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
+            this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.ouvrirToolStripMenuItem.Text = "&Ajouter un document...";
+            // 
+            // audioToolStripMenuItem
+            // 
+            this.audioToolStripMenuItem.Name = "audioToolStripMenuItem";
+            this.audioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.audioToolStripMenuItem.Text = "Audio";
+            this.audioToolStripMenuItem.Click += new System.EventHandler(this.audioToolStripMenuItem_Click);
+            // 
+            // vidéoToolStripMenuItem
+            // 
+            this.vidéoToolStripMenuItem.Name = "vidéoToolStripMenuItem";
+            this.vidéoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vidéoToolStripMenuItem.Text = "Vidéo";
+            this.vidéoToolStripMenuItem.Click += new System.EventHandler(this.vidéoToolStripMenuItem_Click);
+            // 
+            // multimédiaToolStripMenuItem
+            // 
+            this.multimédiaToolStripMenuItem.Name = "multimédiaToolStripMenuItem";
+            this.multimédiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.multimédiaToolStripMenuItem.Text = "Multimédia";
+            // 
+            // texteToolStripMenuItem
+            // 
+            this.texteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.articleToolStripMenuItem,
+            this.livreToolStripMenuItem});
+            this.texteToolStripMenuItem.Name = "texteToolStripMenuItem";
+            this.texteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.texteToolStripMenuItem.Text = "Texte";
+            // 
+            // articleToolStripMenuItem
+            // 
+            this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
+            this.articleToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.articleToolStripMenuItem.Text = "Article";
+            // 
+            // livreToolStripMenuItem
+            // 
+            this.livreToolStripMenuItem.Name = "livreToolStripMenuItem";
+            this.livreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.livreToolStripMenuItem.Text = "Livre";
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            this.supprimerToolStripMenuItem.Image = global::Mediatheque.Properties.Resources.deleteToolStripButton;
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.Image = global::Mediatheque.Properties.Resources.propertiesButton;
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.modifierToolStripMenuItem.Text = "Modifier";
+            // 
+            // àproposdeToolStripMenuItem
+            // 
+            this.àproposdeToolStripMenuItem.Image = global::Mediatheque.Properties.Resources.helpToolStripMenuItem;
+            this.àproposdeToolStripMenuItem.Name = "àproposdeToolStripMenuItem";
+            this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.àproposdeToolStripMenuItem.Text = "À &propos de...";
             // 
             // MainForm
             // 
@@ -529,7 +581,6 @@
         private System.Windows.Forms.ToolStripContentPanel ContentPanel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
@@ -560,6 +611,13 @@
         private System.Windows.Forms.ListBox textListBox;
         private System.Windows.Forms.SplitContainer mmSplitContainer;
         private System.Windows.Forms.ListBox mmListBox;
+        private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem audioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vidéoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem multimédiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem texteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem articleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem livreToolStripMenuItem;
 
 
     }
