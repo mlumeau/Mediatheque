@@ -42,44 +42,27 @@ namespace Mediatheque
             }
         }
 
-        public IEnumerable<Audio> DocumentsAudio()
+        public IEnumerable<T> GetDocuments<T>() where T : Document
         {
-            IEnumerable<Audio> audios =
-                from doc in documents
-                where doc.type == Type.AUDIO
-                select (Audio)doc;
-
-            return audios;
+            return documents.OfType<T>(); 
         }
 
-        public IEnumerable<Video> DocumentsVideo()
+        public IEnumerable<T> GetDocumentsByAuteur<T>() where T : Document
         {
-            IEnumerable<Video> videos =
-                from doc in documents
-                where doc.type == Type.VIDEO
-                select (Video)doc;
+            var res = from doc in GetDocuments<T>()
+                      orderby doc.auteur
+                      select doc;
 
-            return videos;
+            return res;
         }
 
-        public IEnumerable<Texte> DocumentsTexte()
+        public IEnumerable<T> GetDocumentsByTitre<T>() where T : Document
         {
-            IEnumerable<Texte> textes =
-                from doc in documents
-                where doc.type == Type.TEXTE
-                select (Texte)doc;
+            var res = from doc in GetDocuments<T>()
+                      orderby doc.titre
+                      select doc;
 
-            return textes;
-        }
-
-        public IEnumerable<Multimedia> DocumentsMultimedia()
-        {
-            IEnumerable<Multimedia> multimedias =
-                from doc in documents
-                where doc.type == Type.TEXTE
-                select (Multimedia)doc;
-
-            return multimedias;
+            return res;
         }
 
         public void Sauvegarder(string filename = "mediatheque.dat")

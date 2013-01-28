@@ -13,7 +13,7 @@ namespace Mediatheque
         public Video(string _titre="", string _path="", bool _hasCopyright=false)
             : base(_titre, _path, _hasCopyright) { type = Type.VIDEO; }
 
-        public override void Afficher()
+        public override string Afficher()
         {
 
         }

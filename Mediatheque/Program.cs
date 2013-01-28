@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Mediatheque
 {
     static class Program
@@ -31,6 +30,8 @@ namespace Mediatheque
             test.Sauvegarder();
             Mediatheque testCharger = Mediatheque.Charger();
             */
+
+//Audio test = new Audio("title", "D:\\Musique\\Can - Ege Bamyasi\1972 Can - Ege Bamyasi (remaster)\lol.mp3"); 
         }
     }
 }

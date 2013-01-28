@@ -10,6 +10,7 @@ namespace Mediatheque
     {
        
         public string titre { get; set; }
+        public string auteur { get; set; }
         public string path { get; set; }
         public bool hasCopyright { get; set; }
         public Type type { get; set; }
@@ -30,7 +31,7 @@ namespace Mediatheque
             hasCopyright = _hasCopyright;
         }
 
-        public abstract void Afficher();
+        public abstract string Afficher();
     }
 }
 
