@@ -67,5 +67,23 @@ namespace Mediatheque
             vf.Show();
         }
 
+        private void multimédiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AjoutMMForm mmf = new AjoutMMForm();
+            mmf.Show();
+        }
+
+        private void livreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AjoutLivreForm lf = new AjoutLivreForm();
+            lf.Show();
+        }
+
+        private void articleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AjoutArticleForm af = new AjoutArticleForm();
+            af.Show();
+        }
+
     }
 }

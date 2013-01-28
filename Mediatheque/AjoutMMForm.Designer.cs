@@ -1,6 +1,6 @@
 ﻿namespace Mediatheque
 {
-    partial class AjoutVideoForm
+    partial class AjoutMMForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cheminTextBox = new System.Windows.Forms.TextBox();
             this.parcourirButton = new System.Windows.Forms.Button();
-            this.openVideoFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.openMMFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -75,7 +75,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 173);
-            this.tableLayoutPanel1.TabIndex = 10;
+            this.tableLayoutPanel1.TabIndex = 11;
             // 
             // splitContainer2
             // 
@@ -109,7 +109,7 @@
             // annulerButton
             // 
             this.annulerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.annulerButton.Location = new System.Drawing.Point(31, 3);
+            this.annulerButton.Location = new System.Drawing.Point(32, 3);
             this.annulerButton.Name = "annulerButton";
             this.annulerButton.Size = new System.Drawing.Size(82, 26);
             this.annulerButton.TabIndex = 1;
@@ -180,7 +180,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.parcourirButton);
             this.splitContainer1.Size = new System.Drawing.Size(278, 25);
-            this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.SplitterDistance = 199;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -192,12 +192,12 @@
             this.cheminTextBox.Location = new System.Drawing.Point(3, 2);
             this.cheminTextBox.Name = "cheminTextBox";
             this.cheminTextBox.ReadOnly = true;
-            this.cheminTextBox.Size = new System.Drawing.Size(193, 20);
+            this.cheminTextBox.Size = new System.Drawing.Size(194, 20);
             this.cheminTextBox.TabIndex = 2;
             // 
             // parcourirButton
             // 
-            this.parcourirButton.Location = new System.Drawing.Point(1, 0);
+            this.parcourirButton.Location = new System.Drawing.Point(2, 0);
             this.parcourirButton.Name = "parcourirButton";
             this.parcourirButton.Size = new System.Drawing.Size(72, 23);
             this.parcourirButton.TabIndex = 0;
@@ -205,19 +205,20 @@
             this.parcourirButton.UseVisualStyleBackColor = true;
             this.parcourirButton.Click += new System.EventHandler(this.parcourirButton_Click);
             // 
-            // openVideoFileDialog
+            // openMMFileDialog
             // 
-            this.openVideoFileDialog.Filter = "Fichiers AVI|*.avi|Fichiers MPEG4|*.mp4";
-            this.openVideoFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openVideoFileDialog_FileOk);
+            this.openMMFileDialog.Filter = "Fichiers MKV|*.mkv";
+            this.openMMFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openMMFileDialog_FileOk);
             // 
-            // AjoutVideoForm
+            // AjoutMMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 173);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "AjoutVideoForm";
-            this.Text = "Ajouter une vidéo";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "AjoutMMForm";
+            this.Text = "Ajouter un fichier multimédia";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
@@ -247,7 +248,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TextBox cheminTextBox;
         private System.Windows.Forms.Button parcourirButton;
-        private System.Windows.Forms.OpenFileDialog openVideoFileDialog;
-
+        private System.Windows.Forms.OpenFileDialog openMMFileDialog;
     }
 }

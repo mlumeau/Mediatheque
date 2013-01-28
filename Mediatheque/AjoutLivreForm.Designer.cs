@@ -1,6 +1,6 @@
 ﻿namespace Mediatheque
 {
-    partial class AjoutVideoForm
+    partial class AjoutLivreForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,11 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cheminTextBox = new System.Windows.Forms.TextBox();
             this.parcourirButton = new System.Windows.Forms.Button();
-            this.openVideoFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.openLivreFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.editeurLabel = new System.Windows.Forms.Label();
+            this.anneeParutionLabel = new System.Windows.Forms.Label();
+            this.editeurTextBox = new System.Windows.Forms.TextBox();
+            this.anneeParutionTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -56,32 +60,39 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 284F));
-            this.tableLayoutPanel1.Controls.Add(this.splitContainer2, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.editeurLabel, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.cheminTitleLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.titreLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.auteurLabel, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.auteurTextBox, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.titreTextBox, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.splitContainer1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.anneeParutionTextBox, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.anneeParutionLabel, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.splitContainer2, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.editeurTextBox, 0, 7);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 173);
-            this.tableLayoutPanel1.TabIndex = 10;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 264);
+            this.tableLayoutPanel1.TabIndex = 12;
             // 
             // splitContainer2
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.IsSplitterFixed = true;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 138);
+            this.splitContainer2.Location = new System.Drawing.Point(3, 228);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -109,7 +120,7 @@
             // annulerButton
             // 
             this.annulerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.annulerButton.Location = new System.Drawing.Point(31, 3);
+            this.annulerButton.Location = new System.Drawing.Point(33, 3);
             this.annulerButton.Name = "annulerButton";
             this.annulerButton.Size = new System.Drawing.Size(82, 26);
             this.annulerButton.TabIndex = 1;
@@ -180,7 +191,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.parcourirButton);
             this.splitContainer1.Size = new System.Drawing.Size(278, 25);
-            this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.SplitterDistance = 201;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -192,12 +203,12 @@
             this.cheminTextBox.Location = new System.Drawing.Point(3, 2);
             this.cheminTextBox.Name = "cheminTextBox";
             this.cheminTextBox.ReadOnly = true;
-            this.cheminTextBox.Size = new System.Drawing.Size(193, 20);
+            this.cheminTextBox.Size = new System.Drawing.Size(196, 20);
             this.cheminTextBox.TabIndex = 2;
             // 
             // parcourirButton
             // 
-            this.parcourirButton.Location = new System.Drawing.Point(1, 0);
+            this.parcourirButton.Location = new System.Drawing.Point(2, 0);
             this.parcourirButton.Name = "parcourirButton";
             this.parcourirButton.Size = new System.Drawing.Size(72, 23);
             this.parcourirButton.TabIndex = 0;
@@ -205,19 +216,57 @@
             this.parcourirButton.UseVisualStyleBackColor = true;
             this.parcourirButton.Click += new System.EventHandler(this.parcourirButton_Click);
             // 
-            // openVideoFileDialog
+            // openLivreFileDialog
             // 
-            this.openVideoFileDialog.Filter = "Fichiers AVI|*.avi|Fichiers MPEG4|*.mp4";
-            this.openVideoFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openVideoFileDialog_FileOk);
+            this.openLivreFileDialog.Filter = "Fichiers PDF|*.pdf|Fichiers Word 97-03|*.doc|Fichiers Word 07|*.docx|Fichiers EPU" +
+    "B|*.epub";
+            this.openLivreFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openLivreFileDialog_FileOk);
             // 
-            // AjoutVideoForm
+            // editeurLabel
+            // 
+            this.editeurLabel.AutoSize = true;
+            this.editeurLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editeurLabel.Location = new System.Drawing.Point(3, 135);
+            this.editeurLabel.Name = "editeurLabel";
+            this.editeurLabel.Size = new System.Drawing.Size(41, 12);
+            this.editeurLabel.TabIndex = 10;
+            this.editeurLabel.Text = "Éditeur";
+            this.editeurLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // anneeParutionLabel
+            // 
+            this.anneeParutionLabel.AutoSize = true;
+            this.anneeParutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.anneeParutionLabel.Location = new System.Drawing.Point(3, 180);
+            this.anneeParutionLabel.Name = "anneeParutionLabel";
+            this.anneeParutionLabel.Size = new System.Drawing.Size(96, 12);
+            this.anneeParutionLabel.TabIndex = 12;
+            this.anneeParutionLabel.Text = "Année de parution";
+            this.anneeParutionLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // editeurTextBox
+            // 
+            this.editeurTextBox.Location = new System.Drawing.Point(3, 153);
+            this.editeurTextBox.Name = "editeurTextBox";
+            this.editeurTextBox.Size = new System.Drawing.Size(278, 20);
+            this.editeurTextBox.TabIndex = 13;
+            // 
+            // anneeParutionTextBox
+            // 
+            this.anneeParutionTextBox.Location = new System.Drawing.Point(3, 198);
+            this.anneeParutionTextBox.Name = "anneeParutionTextBox";
+            this.anneeParutionTextBox.Size = new System.Drawing.Size(278, 20);
+            this.anneeParutionTextBox.TabIndex = 11;
+            // 
+            // AjoutLivreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 173);
+            this.ClientSize = new System.Drawing.Size(284, 264);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "AjoutVideoForm";
-            this.Text = "Ajouter une vidéo";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "AjoutLivreForm";
+            this.Text = "Ajouter un livre";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
@@ -247,7 +296,10 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TextBox cheminTextBox;
         private System.Windows.Forms.Button parcourirButton;
-        private System.Windows.Forms.OpenFileDialog openVideoFileDialog;
-
+        private System.Windows.Forms.OpenFileDialog openLivreFileDialog;
+        private System.Windows.Forms.Label editeurLabel;
+        private System.Windows.Forms.TextBox anneeParutionTextBox;
+        private System.Windows.Forms.Label anneeParutionLabel;
+        private System.Windows.Forms.TextBox editeurTextBox;
     }
 }

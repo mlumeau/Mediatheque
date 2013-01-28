@@ -15,7 +15,7 @@ namespace Mediatheque
 
         public override string Afficher()
         {
-
+            return "";
         }
     }
 }

@@ -236,7 +236,7 @@
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(240, 7);
+            this.searchBox.Location = new System.Drawing.Point(237, 7);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(137, 20);
             this.searchBox.TabIndex = 4;
@@ -244,7 +244,7 @@
             // searchButton
             // 
             this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchButton.Location = new System.Drawing.Point(383, 3);
+            this.searchButton.Location = new System.Drawing.Point(377, 3);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(81, 26);
             this.searchButton.TabIndex = 5;
@@ -338,7 +338,7 @@
             // 
             this.audioSplitContainer.Panel1.Controls.Add(this.audioListBox);
             this.audioSplitContainer.Size = new System.Drawing.Size(663, 316);
-            this.audioSplitContainer.SplitterDistance = 478;
+            this.audioSplitContainer.SplitterDistance = 477;
             this.audioSplitContainer.TabIndex = 1;
             // 
             // audioListBox
@@ -347,7 +347,7 @@
             this.audioListBox.FormattingEnabled = true;
             this.audioListBox.Location = new System.Drawing.Point(0, 0);
             this.audioListBox.Name = "audioListBox";
-            this.audioListBox.Size = new System.Drawing.Size(478, 316);
+            this.audioListBox.Size = new System.Drawing.Size(477, 316);
             this.audioListBox.TabIndex = 2;
             // 
             // videoPage
@@ -483,6 +483,7 @@
             this.multimédiaToolStripMenuItem.Name = "multimédiaToolStripMenuItem";
             this.multimédiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.multimédiaToolStripMenuItem.Text = "Multimédia";
+            this.multimédiaToolStripMenuItem.Click += new System.EventHandler(this.multimédiaToolStripMenuItem_Click);
             // 
             // texteToolStripMenuItem
             // 
@@ -496,14 +497,16 @@
             // articleToolStripMenuItem
             // 
             this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
-            this.articleToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.articleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.articleToolStripMenuItem.Text = "Article";
+            this.articleToolStripMenuItem.Click += new System.EventHandler(this.articleToolStripMenuItem_Click);
             // 
             // livreToolStripMenuItem
             // 
             this.livreToolStripMenuItem.Name = "livreToolStripMenuItem";
-            this.livreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.livreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.livreToolStripMenuItem.Text = "Livre";
+            this.livreToolStripMenuItem.Click += new System.EventHandler(this.livreToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
