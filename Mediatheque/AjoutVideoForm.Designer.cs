@@ -105,11 +105,12 @@
             this.validerButton.TabIndex = 0;
             this.validerButton.Text = "&Valider";
             this.validerButton.UseVisualStyleBackColor = true;
+            this.validerButton.Click += new System.EventHandler(this.validerButton_Click);
             // 
             // annulerButton
             // 
             this.annulerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.annulerButton.Location = new System.Drawing.Point(31, 3);
+            this.annulerButton.Location = new System.Drawing.Point(32, 3);
             this.annulerButton.Name = "annulerButton";
             this.annulerButton.Size = new System.Drawing.Size(82, 26);
             this.annulerButton.TabIndex = 1;
@@ -180,7 +181,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.parcourirButton);
             this.splitContainer1.Size = new System.Drawing.Size(278, 25);
-            this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.SplitterDistance = 202;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -192,7 +193,7 @@
             this.cheminTextBox.Location = new System.Drawing.Point(3, 2);
             this.cheminTextBox.Name = "cheminTextBox";
             this.cheminTextBox.ReadOnly = true;
-            this.cheminTextBox.Size = new System.Drawing.Size(193, 20);
+            this.cheminTextBox.Size = new System.Drawing.Size(195, 20);
             this.cheminTextBox.TabIndex = 2;
             // 
             // parcourirButton

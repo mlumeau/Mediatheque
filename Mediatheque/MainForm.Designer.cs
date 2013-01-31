@@ -39,7 +39,6 @@
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sélectionnertoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -176,18 +175,11 @@
             // editionToolStripMenuItem
             // 
             this.editionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sélectionnertoutToolStripMenuItem,
             this.supprimerToolStripMenuItem,
             this.modifierToolStripMenuItem});
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
             this.editionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.editionToolStripMenuItem.Text = "&Edition";
-            // 
-            // sélectionnertoutToolStripMenuItem
-            // 
-            this.sélectionnertoutToolStripMenuItem.Name = "sélectionnertoutToolStripMenuItem";
-            this.sélectionnertoutToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.sélectionnertoutToolStripMenuItem.Text = "Sélectio&nner tout";
             // 
             // outilsToolStripMenuItem
             // 
@@ -236,7 +228,7 @@
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(237, 7);
+            this.searchBox.Location = new System.Drawing.Point(240, 7);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(137, 20);
             this.searchBox.TabIndex = 4;
@@ -244,7 +236,7 @@
             // searchButton
             // 
             this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchButton.Location = new System.Drawing.Point(377, 3);
+            this.searchButton.Location = new System.Drawing.Point(380, 3);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(81, 26);
             this.searchButton.TabIndex = 5;
@@ -467,21 +459,21 @@
             // audioToolStripMenuItem
             // 
             this.audioToolStripMenuItem.Name = "audioToolStripMenuItem";
-            this.audioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.audioToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.audioToolStripMenuItem.Text = "Audio";
             this.audioToolStripMenuItem.Click += new System.EventHandler(this.audioToolStripMenuItem_Click);
             // 
             // vidéoToolStripMenuItem
             // 
             this.vidéoToolStripMenuItem.Name = "vidéoToolStripMenuItem";
-            this.vidéoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vidéoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.vidéoToolStripMenuItem.Text = "Vidéo";
             this.vidéoToolStripMenuItem.Click += new System.EventHandler(this.vidéoToolStripMenuItem_Click);
             // 
             // multimédiaToolStripMenuItem
             // 
             this.multimédiaToolStripMenuItem.Name = "multimédiaToolStripMenuItem";
-            this.multimédiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.multimédiaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.multimédiaToolStripMenuItem.Text = "Multimédia";
             this.multimédiaToolStripMenuItem.Click += new System.EventHandler(this.multimédiaToolStripMenuItem_Click);
             // 
@@ -491,20 +483,20 @@
             this.articleToolStripMenuItem,
             this.livreToolStripMenuItem});
             this.texteToolStripMenuItem.Name = "texteToolStripMenuItem";
-            this.texteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.texteToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.texteToolStripMenuItem.Text = "Texte";
             // 
             // articleToolStripMenuItem
             // 
             this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
-            this.articleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.articleToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.articleToolStripMenuItem.Text = "Article";
             this.articleToolStripMenuItem.Click += new System.EventHandler(this.articleToolStripMenuItem_Click);
             // 
             // livreToolStripMenuItem
             // 
             this.livreToolStripMenuItem.Name = "livreToolStripMenuItem";
-            this.livreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.livreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.livreToolStripMenuItem.Text = "Livre";
             this.livreToolStripMenuItem.Click += new System.EventHandler(this.livreToolStripMenuItem_Click);
             // 
@@ -512,15 +504,16 @@
             // 
             this.supprimerToolStripMenuItem.Image = global::Mediatheque.Properties.Resources.deleteToolStripButton;
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Image = global::Mediatheque.Properties.Resources.propertiesButton;
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
+            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
             // àproposdeToolStripMenuItem
             // 
@@ -587,7 +580,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sélectionnertoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outilsToolStripMenuItem;

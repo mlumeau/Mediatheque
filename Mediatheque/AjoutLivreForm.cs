@@ -34,5 +34,10 @@ namespace Mediatheque
         {
             this.Close();
         }
+
+        private void validerButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

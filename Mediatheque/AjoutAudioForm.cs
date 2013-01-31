@@ -28,11 +28,17 @@ namespace Mediatheque
         {
             string file = openAudioFileDialog.FileName;
             cheminTextBox.Text = string.Format("{1}", Path.GetDirectoryName(file), openAudioFileDialog.FileName);
+            //préremplir avec infos id3
         }
 
         private void annulerButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void validerButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

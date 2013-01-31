@@ -27,6 +27,7 @@ namespace Mediatheque
         {
             string file = openVideoFileDialog.FileName;
             cheminTextBox.Text = string.Format("{1}", Path.GetDirectoryName(file), openVideoFileDialog.FileName);
+            //préremplir avec infos id3
         }
 
         private void annulerButton_Click(object sender, EventArgs e)
@@ -34,7 +35,10 @@ namespace Mediatheque
             this.Close();
         }
 
+        private void validerButton_Click(object sender, EventArgs e)
+        {
 
+        }
 
     }
 }

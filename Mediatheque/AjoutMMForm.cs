@@ -27,11 +27,17 @@ namespace Mediatheque
         {
             string file = openMMFileDialog.FileName;
             cheminTextBox.Text = string.Format("{1}", Path.GetDirectoryName(file), openMMFileDialog.FileName);
+            //préremplir avec infos id3
         }
 
         private void annulerButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void validerButton_Click(object sender, EventArgs e)
+        {
+
         }
         
     }

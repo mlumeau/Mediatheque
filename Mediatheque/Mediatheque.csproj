@@ -100,11 +100,35 @@
     <Compile Include="Audio.cs" />
     <Compile Include="Article.cs" />
     <Compile Include="Livre.cs" />
-    <Compile Include="ModificationForm.cs">
+    <Compile Include="ModifArticleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModificationForm.Designer.cs">
-      <DependentUpon>ModificationForm.cs</DependentUpon>
+    <Compile Include="ModifArticleForm.Designer.cs">
+      <DependentUpon>ModifArticleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifAudioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifAudioForm.Designer.cs">
+      <DependentUpon>ModifAudioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifLivreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifLivreForm.Designer.cs">
+      <DependentUpon>ModifLivreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifMMForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifMMForm.Designer.cs">
+      <DependentUpon>ModifMMForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifVideoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifVideoForm.Designer.cs">
+      <DependentUpon>ModifVideoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Video.cs" />
     <Compile Include="Multimedia.cs" />
@@ -138,8 +162,20 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModificationForm.resx">
-      <DependentUpon>ModificationForm.cs</DependentUpon>
+    <EmbeddedResource Include="ModifArticleForm.resx">
+      <DependentUpon>ModifArticleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifAudioForm.resx">
+      <DependentUpon>ModifAudioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifLivreForm.resx">
+      <DependentUpon>ModifLivreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifMMForm.resx">
+      <DependentUpon>ModifMMForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifVideoForm.resx">
+      <DependentUpon>ModifVideoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

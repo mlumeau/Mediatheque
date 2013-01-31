@@ -85,5 +85,10 @@ namespace Mediatheque
             af.Show();
         }
 
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
