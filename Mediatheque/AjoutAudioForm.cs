@@ -38,7 +38,16 @@ namespace Mediatheque
 
         private void validerButton_Click(object sender, EventArgs e)
         {
+            if (titreTextBox.Text == "" || auteurTextBox.Text == "")
+            {
+                MessageBox.Show("Veuillez remplir tous les champs correctement.");
+            }
+            else
+            {
+                Audio aud = new Audio();
 
+                this.Close();
+            }
         }
     }
 }

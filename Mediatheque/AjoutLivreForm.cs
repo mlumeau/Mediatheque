@@ -37,7 +37,17 @@ namespace Mediatheque
 
         private void validerButton_Click(object sender, EventArgs e)
         {
+            if (titreTextBox.Text == "" || auteurTextBox.Text == "" || editeurTextBox.Text == "" || DateTime.Parse(anneeParutionTextBox.Text).ToString() != anneeParutionTextBox.Text || cheminTextBox.Text == "")
+            {
+                MessageBox.Show("Veuillez remplir tous les champs correctement.");
+            }
+            else
+            {
+                Livre l = new Livre(titreTextBox.Text, cheminTextBox.Text, true, DateTime.Parse(anneeParutionTextBox.Text), editeurTextBox.Text);
 
+
+                this.Close();
+            }
         }
     }
 }

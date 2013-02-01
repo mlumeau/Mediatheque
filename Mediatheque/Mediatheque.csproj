@@ -99,6 +99,7 @@
     </Compile>
     <Compile Include="Audio.cs" />
     <Compile Include="Article.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Livre.cs" />
     <Compile Include="ModifArticleForm.cs">
       <SubType>Form</SubType>
