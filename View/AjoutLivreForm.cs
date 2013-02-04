@@ -48,7 +48,7 @@ namespace View
             }
             else
             {
-                Livre l = new Livre(titreTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked, DateTime.Parse(anneeParutionTextBox.Text), editeurTextBox.Text);
+                Livre l = new Livre(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked, DateTime.Parse(anneeParutionTextBox.Text), editeurTextBox.Text);
 
                 ctrl.mediatheque.Ajouter(l);
 

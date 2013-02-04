@@ -9,9 +9,6 @@ using System.Xml.Serialization;
 
 namespace Model
 {
-
-    public enum Type {Audio, Video, Multimedia, Texte, Livre, Article};
-
     public class Mediatheque
     {
         [XmlElement(typeof(Video))]

@@ -42,7 +42,7 @@ namespace View
             }
             else
             {
-                Article art = new Article(titreTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked, numEditionTextBox.Text, editeurTextBox.Text);
+                Article art = new Article(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked, numEditionTextBox.Text, editeurTextBox.Text);
 
                 ctrl.mediatheque.Ajouter(art);
 

@@ -10,8 +10,8 @@ namespace Model
     {
         public Video() { }
 
-        public Video(string _titre = "", string _path = "", bool _hasCopyright = false)
-            : base(_titre, _path, _hasCopyright) { type = Type.Video; }
+        public Video(string _titre = "",string _auteur="",  string _path = "", bool _hasCopyright = false)
+            : base(_titre, _auteur, _path, _hasCopyright) { type = typeof(Video).Name; }
 
         public override string Afficher()
         {

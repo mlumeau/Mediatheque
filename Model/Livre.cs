@@ -13,11 +13,12 @@ namespace Model
         public string editeur { get; set; }
 
         public Livre() { }
-        public Livre(string _titre, string _path, bool _hasCopyright, DateTime _parution, string _editeur)
-            : base(_titre, _path, _hasCopyright)
+        public Livre(string _titre, string _auteur, string _path, bool _hasCopyright, DateTime _parution, string _editeur)
+            : base(_titre,_auteur, _path, _hasCopyright)
         {
             parution = _parution;
             editeur = _editeur;
+            type = typeof(Livre).Name;
         }
 
         public override string Afficher()

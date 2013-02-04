@@ -10,8 +10,8 @@ namespace Model
     {
         public Multimedia() { }
 
-        public Multimedia(string _titre, string _path, bool _hasCopyright)
-            : base(_titre, _path, _hasCopyright) { type = Type.Multimedia; }
+        public Multimedia(string _titre, string _auteur, string _path, bool _hasCopyright)
+            : base(_titre, _auteur, _path, _hasCopyright) { type = typeof(Multimedia).Name; }
 
         public override string Afficher()
         {

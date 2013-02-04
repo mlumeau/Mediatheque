@@ -20,10 +20,10 @@ namespace View
 
             
             Mediatheque test = new Mediatheque();
-            Document test1 = new Audio("titre1", "path", false);
-            Document test2 = new Video("titre2", "path2", false);
-            Document test3 = new Video("titre3", "path3", false);
-            Document test4 = new Article("titre3", "path3", false, "lol", "lol");
+            Document test1 = new Audio("titre1", "auteur1", "path", false);
+            Document test2 = new Video("titre2", "auteur1", "path2", false);
+            Document test3 = new Video("titre3", "auteur2", "path3", false);
+            Document test4 = new Article("titre3", "auteur3", "path3", false, "lol", "lol");
             test.Ajouter(test1);
             test.Ajouter(test2);
             test.Ajouter(test3);

@@ -12,13 +12,14 @@ namespace Model
         public string auteur { get; set; }
         public string path { get; set; }
         public bool hasCopyright { get; set; }
-        public Type type { get; set; }
+        public string type { get; set; }
 
         public Document() { }
 
-        public Document(string _titre = "", string _path = "", bool _hasCopyright = false)
+        public Document(string _titre = "", string _auteur="", string _path = "", bool _hasCopyright = false)
         {
             titre = _titre;
+            auteur = _auteur;
             path = _path;
             hasCopyright = _hasCopyright;
         }

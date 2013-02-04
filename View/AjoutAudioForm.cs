@@ -49,7 +49,7 @@ namespace View
             }
             else
             {
-                Audio aud = new Audio(titreTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked);
+                Audio aud = new Audio(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked);
 
                 ctrl.mediatheque.Ajouter(aud);
 

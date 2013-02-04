@@ -11,8 +11,8 @@ namespace Model
     {
          public Audio(){}
 
-        public Audio(string _titre="", string _path="", bool _hasCopyright=false)
-            : base(_titre, _path, _hasCopyright) {type = Type.Audio;} 
+        public Audio(string _titre="", string _auteur="", string _path="", bool _hasCopyright=false)
+            : base(_titre, _auteur, _path, _hasCopyright) {type = typeof(Audio).Name;} 
 
         public override string Afficher()
         {

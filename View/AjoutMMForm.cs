@@ -42,7 +42,7 @@ namespace View
 
         private void validerButton_Click(object sender, EventArgs e)
         {
-            Multimedia mm = new Multimedia(titreTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked);
+            Multimedia mm = new Multimedia(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked);
 
             ctrl.mediatheque.Ajouter(mm);
 
