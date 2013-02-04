@@ -22,18 +22,10 @@ namespace Model
 
         public override string Afficher()
         {
-<<<<<<< HEAD:Mediatheque/Article.cs
             string res = 
                 "Auteur      : " + this.auteur + "\n" +
                 "Editeur     : " + this.editeur + "\n" + 
                 "N° Edition  : " + this.numEdition +"\n";
-=======
-            string res =
-                "Auteur      : " + this.auteur + "\n" +
-                "Editeur     : " + this.editeur + "\n" +
-                "N° Edition  : " + this.numEdition + "\n";
->>>>>>> ULTRA COMMIT:Model/Article.cs
-
             return res;
         }
     }

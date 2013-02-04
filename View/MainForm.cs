@@ -24,7 +24,11 @@ namespace View
 
             ctrl = new Ctrl(m, this);
 
-            refreshLists();
+            documentBindingSource.DataSource = m.documents;
+            audioBindingSource.DataSource = m.GetDocuments<Audio>();
+            videoBindingSource.DataSource = m.GetDocuments<Video>();
+            texteBindingSource.DataSource = m.GetDocuments<Texte>();
+            multimediaBindingSource.DataSource = m.GetDocuments<Multimedia>();
 
             tabControl.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem);
         }
@@ -96,7 +100,71 @@ namespace View
 
         private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (tabControl.SelectedTab == allPage)
+            {
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Article))
+                {
+                    ModifArticleForm f = new ModifArticleForm((Article)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Audio))
+                {
+                    ModifAudioForm f = new ModifAudioForm((Audio)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Livre))
+                {
+                    ModifLivreForm f = new ModifLivreForm((Livre)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Multimedia))
+                {
+                    ModifMMForm f = new ModifMMForm((Multimedia)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Video))
+                {
+                    ModifVideoForm f = new ModifVideoForm((Video)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+            }
+            if (tabControl.SelectedTab == textPage)
+            {
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Article))
+                {
+                    ModifArticleForm f = new ModifArticleForm((Article)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Livre))
+                {
+                    ModifLivreForm f = new ModifLivreForm((Livre)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+            }
+            if (tabControl.SelectedTab == audioPage)
+            {
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Audio))
+                {
+                    ModifAudioForm f = new ModifAudioForm((Audio)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+            }
+            if (tabControl.SelectedTab == mmPage)
+            {
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Multimedia))
+                {
+                    ModifMMForm f = new ModifMMForm((Multimedia)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+            }
+            if (tabControl.SelectedTab == videoPage)
+            {
+                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Video))
+                {
+                    ModifVideoForm f = new ModifVideoForm((Video)allGridView.SelectedRows[0].DataBoundItem);
+                    f.ShowDialog();
+                }
+            }
         }
 
         public void refreshLists()
@@ -127,7 +195,13 @@ namespace View
                 if (!multimediaBindingSource.Contains(mm))
                     multimediaBindingSource.Add(mm);
             }
+            
+            m.Sauvegarder();
         }
 
+        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

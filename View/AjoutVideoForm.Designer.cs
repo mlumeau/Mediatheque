@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.validerButton = new System.Windows.Forms.Button();
-            this.annulerButton = new System.Windows.Forms.Button();
             this.cheminTitleLabel = new System.Windows.Forms.Label();
             this.titreLabel = new System.Windows.Forms.Label();
             this.auteurLabel = new System.Windows.Forms.Label();
-            this.auteurTextBox = new System.Windows.Forms.TextBox();
             this.titreTextBox = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cheminTextBox = new System.Windows.Forms.TextBox();
             this.parcourirButton = new System.Windows.Forms.Button();
-            this.openVideoFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.validerButton = new System.Windows.Forms.Button();
+            this.annulerButton = new System.Windows.Forms.Button();
             this.copyrightCheckBox = new System.Windows.Forms.CheckBox();
+            this.auteurTextBox = new System.Windows.Forms.TextBox();
+            this.openVideoFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -79,46 +79,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 203);
             this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.IsSplitterFixed = true;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 168);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.validerButton);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.annulerButton);
-            this.splitContainer2.Size = new System.Drawing.Size(278, 32);
-            this.splitContainer2.SplitterDistance = 138;
-            this.splitContainer2.SplitterWidth = 2;
-            this.splitContainer2.TabIndex = 9;
-            // 
-            // validerButton
-            // 
-            this.validerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.validerButton.Location = new System.Drawing.Point(28, 3);
-            this.validerButton.Name = "validerButton";
-            this.validerButton.Size = new System.Drawing.Size(82, 26);
-            this.validerButton.TabIndex = 0;
-            this.validerButton.Text = "&Valider";
-            this.validerButton.UseVisualStyleBackColor = true;
-            this.validerButton.Click += new System.EventHandler(this.validerButton_Click);
-            // 
-            // annulerButton
-            // 
-            this.annulerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.annulerButton.Location = new System.Drawing.Point(33, 3);
-            this.annulerButton.Name = "annulerButton";
-            this.annulerButton.Size = new System.Drawing.Size(82, 26);
-            this.annulerButton.TabIndex = 1;
-            this.annulerButton.Text = "&Annuler";
-            this.annulerButton.UseVisualStyleBackColor = true;
-            this.annulerButton.Click += new System.EventHandler(this.annulerButton_Click);
             // 
             // cheminTitleLabel
             // 
@@ -153,13 +113,6 @@
             this.auteurLabel.Text = "Auteur";
             this.auteurLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // auteurTextBox
-            // 
-            this.auteurTextBox.Location = new System.Drawing.Point(3, 108);
-            this.auteurTextBox.Name = "auteurTextBox";
-            this.auteurTextBox.Size = new System.Drawing.Size(278, 20);
-            this.auteurTextBox.TabIndex = 3;
-            // 
             // titreTextBox
             // 
             this.titreTextBox.Location = new System.Drawing.Point(3, 63);
@@ -183,7 +136,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.parcourirButton);
             this.splitContainer1.Size = new System.Drawing.Size(278, 25);
-            this.splitContainer1.SplitterDistance = 204;
+            this.splitContainer1.SplitterDistance = 206;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -195,7 +148,7 @@
             this.cheminTextBox.Location = new System.Drawing.Point(3, 2);
             this.cheminTextBox.Name = "cheminTextBox";
             this.cheminTextBox.ReadOnly = true;
-            this.cheminTextBox.Size = new System.Drawing.Size(197, 20);
+            this.cheminTextBox.Size = new System.Drawing.Size(199, 20);
             this.cheminTextBox.TabIndex = 2;
             // 
             // parcourirButton
@@ -208,10 +161,45 @@
             this.parcourirButton.UseVisualStyleBackColor = true;
             this.parcourirButton.Click += new System.EventHandler(this.parcourirButton_Click);
             // 
-            // openVideoFileDialog
+            // splitContainer2
             // 
-            this.openVideoFileDialog.Filter = "Fichiers AVI|*.avi|Fichiers MPEG4|*.mp4";
-            this.openVideoFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openVideoFileDialog_FileOk);
+            this.splitContainer2.IsSplitterFixed = true;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 168);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.validerButton);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.annulerButton);
+            this.splitContainer2.Size = new System.Drawing.Size(278, 32);
+            this.splitContainer2.SplitterDistance = 138;
+            this.splitContainer2.SplitterWidth = 2;
+            this.splitContainer2.TabIndex = 9;
+            // 
+            // validerButton
+            // 
+            this.validerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.validerButton.Location = new System.Drawing.Point(28, 3);
+            this.validerButton.Name = "validerButton";
+            this.validerButton.Size = new System.Drawing.Size(82, 26);
+            this.validerButton.TabIndex = 0;
+            this.validerButton.Text = "&Valider";
+            this.validerButton.UseVisualStyleBackColor = true;
+            this.validerButton.Click += new System.EventHandler(this.validerButton_Click);
+            // 
+            // annulerButton
+            // 
+            this.annulerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.annulerButton.Location = new System.Drawing.Point(34, 3);
+            this.annulerButton.Name = "annulerButton";
+            this.annulerButton.Size = new System.Drawing.Size(82, 26);
+            this.annulerButton.TabIndex = 1;
+            this.annulerButton.Text = "&Annuler";
+            this.annulerButton.UseVisualStyleBackColor = true;
+            this.annulerButton.Click += new System.EventHandler(this.annulerButton_Click);
             // 
             // copyrightCheckBox
             // 
@@ -222,6 +210,18 @@
             this.copyrightCheckBox.TabIndex = 19;
             this.copyrightCheckBox.Text = " Copyright";
             this.copyrightCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // auteurTextBox
+            // 
+            this.auteurTextBox.Location = new System.Drawing.Point(3, 108);
+            this.auteurTextBox.Name = "auteurTextBox";
+            this.auteurTextBox.Size = new System.Drawing.Size(278, 20);
+            this.auteurTextBox.TabIndex = 3;
+            // 
+            // openVideoFileDialog
+            // 
+            this.openVideoFileDialog.Filter = "Fichiers AVI|*.avi";
+            this.openVideoFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openVideoFileDialog_FileOk);
             // 
             // AjoutVideoForm
             // 
@@ -234,15 +234,15 @@
             this.Text = "Ajouter une vidéo";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

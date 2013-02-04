@@ -12,7 +12,7 @@ namespace Model
          public Audio(){}
 
         public Audio(string _titre="", string _path="", bool _hasCopyright=false)
-            : base(_titre, _path, _hasCopyright) {type = Type.AUDIO;} 
+            : base(_titre, _path, _hasCopyright) {type = Type.Audio;} 
 
         public override string Afficher()
         {

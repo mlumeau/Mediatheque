@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 namespace Model
 {
 
-    public enum Type {AUDIO, VIDEO, MULTIMEDIA, TEXTE};
+    public enum Type {Audio, Video, Multimedia, Texte, Livre, Article};
 
     public class Mediatheque
     {
@@ -68,7 +68,7 @@ namespace Model
 
         public void Sauvegarder(string filename = "mediatheque.dat")
         {
-            FileStream file = File.Open(filename, FileMode.OpenOrCreate);
+            FileStream file = File.Open(filename, FileMode.Create);
             XmlSerializer serializer = new XmlSerializer(typeof(Mediatheque));
             serializer.Serialize(file, this);
             file.Close();
