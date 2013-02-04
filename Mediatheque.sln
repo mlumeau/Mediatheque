@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediatheque", "Mediatheque\Mediatheque.csproj", "{F99D0E15-F8F7-4CB9-909D-9581E0B83117}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{F04BD134-BC85-4722-A1FC-0FB8523BECE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F19A8EB5-DA19-4C1B-AFF9-A6285A8DBFAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F99D0E15-F8F7-4CB9-909D-9581E0B83117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F99D0E15-F8F7-4CB9-909D-9581E0B83117}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F99D0E15-F8F7-4CB9-909D-9581E0B83117}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F99D0E15-F8F7-4CB9-909D-9581E0B83117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04BD134-BC85-4722-A1FC-0FB8523BECE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04BD134-BC85-4722-A1FC-0FB8523BECE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04BD134-BC85-4722-A1FC-0FB8523BECE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04BD134-BC85-4722-A1FC-0FB8523BECE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F19A8EB5-DA19-4C1B-AFF9-A6285A8DBFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F19A8EB5-DA19-4C1B-AFF9-A6285A8DBFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F19A8EB5-DA19-4C1B-AFF9-A6285A8DBFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F19A8EB5-DA19-4C1B-AFF9-A6285A8DBFAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
