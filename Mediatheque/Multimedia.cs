@@ -15,7 +15,8 @@ namespace Mediatheque
 
         public override string Afficher()
         {
-            return "";
+            string res = "";
+            return res;
         }
 
         public void Print()

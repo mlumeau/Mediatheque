@@ -19,5 +19,15 @@ namespace Mediatheque
             parution = _parution;
             editeur = _editeur;
         }
+
+        public override string Afficher()
+        {
+            string res =
+                "Auteur      : " + this.auteur + "\n" +
+                "Editeur     : " + this.editeur + "\n" +
+                "Parution    : " + this.parution + "\n";
+
+            return res;
+        }
     }
 }

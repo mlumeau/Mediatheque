@@ -15,7 +15,16 @@ namespace Mediatheque
 
         public override string Afficher()
         {
-            return "";
+            string res = "";
+            TagLib.File f = TagLib.File.Create(this.path);
+            if (f.Tag != null)
+            {
+                res = 
+                    "Titre         : " + f.Tag.Title + "\n" +
+                    "Durée         : " + f.Properties.Duration + "\n" +
+                    "Résolution    : " + f.Properties.VideoWidth + "x" + f.Properties.VideoHeight + "\n";
+            }
+            return res;
         }
     }
 }
