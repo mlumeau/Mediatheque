@@ -28,8 +28,10 @@ namespace Model
         public void Ajouter(Document _doc){
             if(!documents.Contains(_doc))
             {
-                documents.Add(_doc);
+                documents.Add(_doc); 
+                this.Sauvegarder();
             }
+            
         }
 
         public void Supprimer(Document _doc)
@@ -37,6 +39,7 @@ namespace Model
             if (documents.Contains(_doc))
             {
                 documents.Remove(_doc);
+                this.Sauvegarder();
             }
         }
 
@@ -73,11 +76,16 @@ namespace Model
 
         public static Mediatheque Charger(string filename = "mediatheque.dat")
         {
-            FileStream file = File.Open(filename, FileMode.Open);
-            XmlSerializer serializer = new XmlSerializer(typeof(Mediatheque));
-            Mediatheque maMediatheque = (Mediatheque)serializer.Deserialize(file);
-            file.Close();
-            return maMediatheque;
+            if (File.Exists(filename))
+            {
+                FileStream file = File.Open(filename, FileMode.Open);
+                XmlSerializer serializer = new XmlSerializer(typeof(Mediatheque));
+                Mediatheque maMediatheque = (Mediatheque)serializer.Deserialize(file);
+                file.Close();
+                return maMediatheque;
+            }
+            else
+                return new Mediatheque(); 
         }
     }
 }
