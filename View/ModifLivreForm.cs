@@ -13,13 +13,15 @@ namespace View
 {
     public partial class ModifLivreForm : Form
     {
-        private Model.Livre l;
+        private Livre l;
+        private Ctrl ctrl;
 
-        public ModifLivreForm(Livre _l)
+        public ModifLivreForm(Livre _l, Ctrl _ctrl)
         {
             InitializeComponent();
 
             l = _l;
+            ctrl = _ctrl;
 
             titreTextBox.Text = l.titre;
             auteurTextBox.Text = l.auteur;
@@ -44,6 +46,8 @@ namespace View
                 l.auteur = auteurTextBox.Text;
                 l.editeur = editeurTextBox.Text;
                 l.parution = DateTime.Parse(anneeParutionTextBox.Text);
+
+                ctrl.mediatheque.Sauvegarder();
 
                 this.Close();
             }

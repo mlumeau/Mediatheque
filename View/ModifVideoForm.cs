@@ -15,12 +15,14 @@ namespace View
     public partial class ModifVideoForm : Form
     {
         Video v;
+        Ctrl ctrl;
 
-        public ModifVideoForm(Video _v)
+        public ModifVideoForm(Video _v, Ctrl _ctrl)
         {
             InitializeComponent();
 
             v = _v;
+            ctrl = _ctrl;
 
             titreTextBox.Text = v.titre;
             auteurTextBox.Text = v.auteur;
@@ -41,6 +43,8 @@ namespace View
             {
                 v.titre = titreTextBox.Text;
                 v.auteur = auteurTextBox.Text;
+
+                ctrl.mediatheque.Sauvegarder();
 
                 this.Close();
             }

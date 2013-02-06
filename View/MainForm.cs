@@ -104,27 +104,27 @@ namespace View
             {
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Article))
                 {
-                    ModifArticleForm f = new ModifArticleForm((Article)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifArticleForm f = new ModifArticleForm((Article)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Audio))
                 {
-                    ModifAudioForm f = new ModifAudioForm((Audio)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifAudioForm f = new ModifAudioForm((Audio)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Livre))
                 {
-                    ModifLivreForm f = new ModifLivreForm((Livre)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifLivreForm f = new ModifLivreForm((Livre)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Multimedia))
                 {
-                    ModifMMForm f = new ModifMMForm((Multimedia)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifMMForm f = new ModifMMForm((Multimedia)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Video))
                 {
-                    ModifVideoForm f = new ModifVideoForm((Video)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifVideoForm f = new ModifVideoForm((Video)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }
@@ -132,12 +132,12 @@ namespace View
             {
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Article))
                 {
-                    ModifArticleForm f = new ModifArticleForm((Article)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifArticleForm f = new ModifArticleForm((Article)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Livre))
                 {
-                    ModifLivreForm f = new ModifLivreForm((Livre)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifLivreForm f = new ModifLivreForm((Livre)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }
@@ -145,7 +145,7 @@ namespace View
             {
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Audio))
                 {
-                    ModifAudioForm f = new ModifAudioForm((Audio)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifAudioForm f = new ModifAudioForm((Audio)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }
@@ -153,7 +153,7 @@ namespace View
             {
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Multimedia))
                 {
-                    ModifMMForm f = new ModifMMForm((Multimedia)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifMMForm f = new ModifMMForm((Multimedia)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }
@@ -161,7 +161,7 @@ namespace View
             {
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Video))
                 {
-                    ModifVideoForm f = new ModifVideoForm((Video)allGridView.SelectedRows[0].DataBoundItem);
+                    ModifVideoForm f = new ModifVideoForm((Video)allGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }

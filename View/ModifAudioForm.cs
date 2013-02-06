@@ -14,12 +14,15 @@ namespace View
     public partial class ModifAudioForm : Form
     {
         private Audio aud;
+        private Ctrl ctrl;
 
-        public ModifAudioForm(Audio _aud)
+
+        public ModifAudioForm(Audio _aud, Ctrl _ctrl)
         {
             InitializeComponent();
 
             aud = _aud;
+            ctrl = _ctrl;
 
             titreTextBox.Text = aud.titre;
             auteurTextBox.Text = aud.auteur;
@@ -40,6 +43,8 @@ namespace View
             {
                 aud.titre = titreTextBox.Text;
                 aud.auteur = auteurTextBox.Text;
+
+                ctrl.mediatheque.Sauvegarder();
 
                 this.Close();
             }

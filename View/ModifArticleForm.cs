@@ -13,13 +13,15 @@ namespace View
 {
     public partial class ModifArticleForm : Form
     {
-        Article art;
+        private Article art;
+        private Ctrl ctrl;
 
-        public ModifArticleForm(Article _art)
+        public ModifArticleForm(Article _art, Ctrl _ctrl)
         {
             InitializeComponent();
 
             art = _art;
+            ctrl = _ctrl;
 
             titreTextBox.Text = art.titre;
             auteurTextBox.Text = art.auteur;
@@ -44,6 +46,8 @@ namespace View
                 art.auteur = auteurTextBox.Text;
                 art.editeur = editeurTextBox.Text;
                 art.numEdition = numEditionTextBox.Text;
+
+                ctrl.mediatheque.Sauvegarder();
 
                 this.Close();
             }

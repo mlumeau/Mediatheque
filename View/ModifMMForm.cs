@@ -13,13 +13,15 @@ namespace View
 {
     public partial class ModifMMForm : Form
     {
-        Multimedia mm;
+        private Multimedia mm;
+        private Ctrl ctrl;
 
-        public ModifMMForm(Multimedia _mm)
+        public ModifMMForm(Multimedia _mm, Ctrl _ctrl)
         {
             InitializeComponent();
 
             mm = _mm;
+            ctrl = _ctrl;
 
             titreTextBox.Text = mm.titre;
             auteurTextBox.Text = mm.auteur;
@@ -40,6 +42,8 @@ namespace View
             {
                 mm.titre = titreTextBox.Text;
                 mm.auteur = auteurTextBox.Text;
+
+                ctrl.mediatheque.Sauvegarder();
 
                 this.Close();
             }
