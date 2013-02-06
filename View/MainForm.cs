@@ -169,39 +169,23 @@ namespace View
 
         public void refreshLists()
         {
-
-            foreach (Document d in m.documents)
-            {
-                if (!documentBindingSource.Contains(d))
-                    documentBindingSource.Add(d);
-            }
-            foreach (Audio a in m.GetDocuments<Audio>())
-            {
-                if (!audioBindingSource.Contains(a))
-                    audioBindingSource.Add(a);
-            }
-            foreach (Video v in m.GetDocuments<Video>())
-            {
-                if (!videoBindingSource.Contains(v))
-                    videoBindingSource.Add(v);
-            }
-            foreach (Texte t in m.GetDocuments<Texte>())
-            {
-                if (!texteBindingSource.Contains(t))
-                    texteBindingSource.Add(t);
-            }
-            foreach (Multimedia mm in m.GetDocuments<Multimedia>())
-            {
-                if (!multimediaBindingSource.Contains(mm))
-                    multimediaBindingSource.Add(mm);
-            }
-            
+            documentBindingSource.DataSource = null;
+            documentBindingSource.DataSource = m.documents;
+            audioBindingSource.DataSource = null;
+            audioBindingSource.DataSource = m.GetDocuments<Audio>();
+            videoBindingSource.DataSource = null;
+            videoBindingSource.DataSource = m.GetDocuments<Video>();
+            texteBindingSource.DataSource = null;
+            texteBindingSource.DataSource = m.GetDocuments<Texte>();
+            multimediaBindingSource.DataSource = null;
+            multimediaBindingSource.DataSource = m.GetDocuments<Multimedia>();
             m.Sauvegarder();
         }
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            ctrl.mediatheque.Supprimer((Document)allGridView.CurrentRow.DataBoundItem);
+            refreshLists(); 
         }
     }
 }

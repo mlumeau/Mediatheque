@@ -45,7 +45,7 @@ namespace View
             Video v = new Video(titreTextBox.Text,auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked);
 
             ctrl.mediatheque.Ajouter(v);
-
+            ctrl.mainform.refreshLists();
             this.Close();
         }
 
