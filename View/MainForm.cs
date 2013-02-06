@@ -30,6 +30,8 @@ namespace View
             texteBindingSource.DataSource = m.GetDocuments<Texte>();
             multimediaBindingSource.DataSource = m.GetDocuments<Multimedia>();
 
+            
+
             tabControl.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem);
         }
 
@@ -202,6 +204,131 @@ namespace View
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void allGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (ctrl.mediatheque.documents.Count() > 0)
+            {
+                allSplitContainer.Panel2.Controls.Clear();
+                Label text = new Label();
+                text.AutoSize = true;
+                text.Font = new Font("Courier New", text.Font.Size);
+                Document d = (Document)allGridView.CurrentRow.DataBoundItem;
+                text.Text = d.Afficher();
+                allSplitContainer.Panel2.Controls.Add(text);
+                allSplitContainer.Panel2.Refresh();
+            }
+        }
+
+        private void audioGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (ctrl.mediatheque.GetDocuments<Audio>().Count() > 0)
+            {
+                audioSplitContainer.Panel2.Controls.Clear();
+                Label text = new Label();
+                text.AutoSize = true;
+                text.Font = new Font("Courier New", text.Font.Size);
+                Document d = (Document)audioGridView.CurrentRow.DataBoundItem;
+                text.Text = d.Afficher();
+                audioSplitContainer.Panel2.Controls.Add(text);
+                audioSplitContainer.Panel2.Refresh();
+            }
+        }
+
+        private void videoGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (ctrl.mediatheque.GetDocuments<Video>().Count() > 0)
+            {
+                videoSplitContainer.Panel2.Controls.Clear();
+                Label text = new Label();
+                text.AutoSize = true;
+                text.Font = new Font("Courier New", text.Font.Size);
+                Document d = (Document)videoGridView.CurrentRow.DataBoundItem;
+                text.Text = d.Afficher();
+                videoSplitContainer.Panel2.Controls.Add(text);
+                videoSplitContainer.Panel2.Refresh();
+            }
+        }
+
+        private void textGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            textSplitContainer.Panel2.Controls.Clear();
+            if (ctrl.mediatheque.GetDocuments<Texte>().Count() > 0)
+            {
+                Label text = new Label();
+                text.AutoSize = true;
+                text.Font = new Font("Courier New", text.Font.Size);
+                Document d = (Document)textGridView.CurrentRow.DataBoundItem;
+                text.Text = d.Afficher();
+                textSplitContainer.Panel2.Controls.Add(text);
+                textSplitContainer.Panel2.Refresh();
+            }
+        }
+
+        private void mmGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (ctrl.mediatheque.GetDocuments<Multimedia>().Count() > 0)
+            {
+                mmSplitContainer.Panel2.Controls.Clear();
+                Label text = new Label();
+                text.AutoSize = true;
+                text.Font = new Font("Courier New", text.Font.Size);
+                Document d = (Document)mmGridView.CurrentRow.DataBoundItem;
+                text.Text = d.Afficher();
+                textSplitContainer.Panel2.Controls.Add(text);
+                textSplitContainer.Panel2.Refresh();
+            }
+        }
+
+        private void allGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void allGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                Document d = (Document)allGridView.SelectedRows[0].DataBoundItem;
+                System.Diagnostics.Process.Start(d.path);
+            }
+        }
+
+        private void audioGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                Document d = (Document)audioGridView.SelectedRows[0].DataBoundItem;
+                System.Diagnostics.Process.Start(d.path);
+            }
+        }
+
+        private void videoGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                Document d = (Document)videoGridView.SelectedRows[0].DataBoundItem;
+                System.Diagnostics.Process.Start(d.path);
+            }
+        }
+
+        private void textGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                Document d = (Document)textGridView.SelectedRows[0].DataBoundItem;
+                System.Diagnostics.Process.Start(d.path);
+            }
+        }
+
+        private void mmGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                Document d = (Document)mmGridView.SelectedRows[0].DataBoundItem;
+                System.Diagnostics.Process.Start(d.path);
+            }
         }
     }
 }

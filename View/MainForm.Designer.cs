@@ -61,32 +61,32 @@
             this.allPage = new System.Windows.Forms.TabPage();
             this.allSplitContainer = new System.Windows.Forms.SplitContainer();
             this.allGridView = new System.Windows.Forms.DataGridView();
-            this.audioPage = new System.Windows.Forms.TabPage();
-            this.audioSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.audioGridView = new System.Windows.Forms.DataGridView();
-            this.videoPage = new System.Windows.Forms.TabPage();
-            this.videoSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.videoGridView = new System.Windows.Forms.DataGridView();
-            this.textPage = new System.Windows.Forms.TabPage();
-            this.textSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.textGridView = new System.Windows.Forms.DataGridView();
-            this.mmPage = new System.Windows.Forms.TabPage();
-            this.mmSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.mmGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.documentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.audioPage = new System.Windows.Forms.TabPage();
+            this.audioSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.audioGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.audioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.videoPage = new System.Windows.Forms.TabPage();
+            this.videoSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.videoGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.videoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textPage = new System.Windows.Forms.TabPage();
+            this.textSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.textGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.texteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mmPage = new System.Windows.Forms.TabPage();
+            this.mmSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.mmGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.multimediaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -101,30 +101,30 @@
             this.allSplitContainer.Panel1.SuspendLayout();
             this.allSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.allGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).BeginInit();
             this.audioPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.audioSplitContainer)).BeginInit();
             this.audioSplitContainer.Panel1.SuspendLayout();
             this.audioSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.audioGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).BeginInit();
             this.videoPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.videoSplitContainer)).BeginInit();
             this.videoSplitContainer.Panel1.SuspendLayout();
             this.videoSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.videoGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).BeginInit();
             this.textPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textSplitContainer)).BeginInit();
             this.textSplitContainer.Panel1.SuspendLayout();
             this.textSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).BeginInit();
             this.mmPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mmSplitContainer)).BeginInit();
             this.mmSplitContainer.Panel1.SuspendLayout();
             this.mmSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mmGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.multimediaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,7 +175,7 @@
             this.aideToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(277, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(238, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -270,14 +270,14 @@
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
@@ -327,14 +327,14 @@
             this.headerSplitContainer.Panel2.Controls.Add(this.searchButton);
             this.headerSplitContainer.Panel2MinSize = 0;
             this.headerSplitContainer.Size = new System.Drawing.Size(739, 34);
-            this.headerSplitContainer.SplitterDistance = 277;
+            this.headerSplitContainer.SplitterDistance = 238;
             this.headerSplitContainer.SplitterWidth = 1;
             this.headerSplitContainer.TabIndex = 2;
             // 
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(246, 7);
+            this.searchBox.Location = new System.Drawing.Point(278, 7);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(126, 20);
             this.searchBox.TabIndex = 4;
@@ -342,7 +342,7 @@
             // searchButton
             // 
             this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchButton.Location = new System.Drawing.Point(378, 3);
+            this.searchButton.Location = new System.Drawing.Point(410, 3);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(77, 26);
             this.searchButton.TabIndex = 5;
@@ -403,7 +403,7 @@
             // 
             this.allSplitContainer.Panel1.Controls.Add(this.allGridView);
             this.allSplitContainer.Size = new System.Drawing.Size(594, 316);
-            this.allSplitContainer.SplitterDistance = 427;
+            this.allSplitContainer.SplitterDistance = 347;
             this.allSplitContainer.TabIndex = 0;
             // 
             // allGridView
@@ -425,8 +425,40 @@
             this.allGridView.Name = "allGridView";
             this.allGridView.ReadOnly = true;
             this.allGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.allGridView.Size = new System.Drawing.Size(427, 316);
+            this.allGridView.Size = new System.Drawing.Size(347, 316);
             this.allGridView.TabIndex = 0;
+            this.allGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allGridView_CellContentClick);
+            this.allGridView.SelectionChanged += new System.EventHandler(this.allGridView_SelectionChanged);
+            this.allGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allGridView_CellDoubleClick);
+            // 
+            // titreDataGridViewTextBoxColumn
+            // 
+            this.titreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titreDataGridViewTextBoxColumn.DataPropertyName = "titre";
+            this.titreDataGridViewTextBoxColumn.HeaderText = "Titre";
+            this.titreDataGridViewTextBoxColumn.Name = "titreDataGridViewTextBoxColumn";
+            this.titreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // auteurDataGridViewTextBoxColumn
+            // 
+            this.auteurDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.auteurDataGridViewTextBoxColumn.DataPropertyName = "auteur";
+            this.auteurDataGridViewTextBoxColumn.HeaderText = "Auteur";
+            this.auteurDataGridViewTextBoxColumn.Name = "auteurDataGridViewTextBoxColumn";
+            this.auteurDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // documentBindingSource
+            // 
+            this.documentBindingSource.AllowNew = false;
+            this.documentBindingSource.DataSource = typeof(Model.Document);
             // 
             // audioPage
             // 
@@ -471,6 +503,29 @@
             this.audioGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.audioGridView.Size = new System.Drawing.Size(427, 316);
             this.audioGridView.TabIndex = 0;
+            this.audioGridView.SelectionChanged += new System.EventHandler(this.audioGridView_SelectionChanged);
+            this.audioGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.audioGridView_CellDoubleClick);
+            // 
+            // titreDataGridViewTextBoxColumn5
+            // 
+            this.titreDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titreDataGridViewTextBoxColumn5.DataPropertyName = "titre";
+            this.titreDataGridViewTextBoxColumn5.HeaderText = "Titre";
+            this.titreDataGridViewTextBoxColumn5.Name = "titreDataGridViewTextBoxColumn5";
+            this.titreDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // auteurDataGridViewTextBoxColumn5
+            // 
+            this.auteurDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.auteurDataGridViewTextBoxColumn5.DataPropertyName = "auteur";
+            this.auteurDataGridViewTextBoxColumn5.HeaderText = "Auteur";
+            this.auteurDataGridViewTextBoxColumn5.Name = "auteurDataGridViewTextBoxColumn5";
+            this.auteurDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // audioBindingSource
+            // 
+            this.audioBindingSource.AllowNew = false;
+            this.audioBindingSource.DataSource = typeof(Model.Audio);
             // 
             // videoPage
             // 
@@ -492,8 +547,8 @@
             // videoSplitContainer.Panel1
             // 
             this.videoSplitContainer.Panel1.Controls.Add(this.videoGridView);
-            this.videoSplitContainer.Size = new System.Drawing.Size(640, 316);
-            this.videoSplitContainer.SplitterDistance = 460;
+            this.videoSplitContainer.Size = new System.Drawing.Size(594, 316);
+            this.videoSplitContainer.SplitterDistance = 426;
             this.videoSplitContainer.TabIndex = 1;
             // 
             // videoGridView
@@ -513,8 +568,31 @@
             this.videoGridView.Name = "videoGridView";
             this.videoGridView.ReadOnly = true;
             this.videoGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.videoGridView.Size = new System.Drawing.Size(460, 316);
+            this.videoGridView.Size = new System.Drawing.Size(426, 316);
             this.videoGridView.TabIndex = 0;
+            this.videoGridView.SelectionChanged += new System.EventHandler(this.videoGridView_SelectionChanged);
+            this.videoGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.videoGridView_CellDoubleClick);
+            // 
+            // titreDataGridViewTextBoxColumn6
+            // 
+            this.titreDataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titreDataGridViewTextBoxColumn6.DataPropertyName = "titre";
+            this.titreDataGridViewTextBoxColumn6.HeaderText = "Titre";
+            this.titreDataGridViewTextBoxColumn6.Name = "titreDataGridViewTextBoxColumn6";
+            this.titreDataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // auteurDataGridViewTextBoxColumn6
+            // 
+            this.auteurDataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.auteurDataGridViewTextBoxColumn6.DataPropertyName = "auteur";
+            this.auteurDataGridViewTextBoxColumn6.HeaderText = "Auteur";
+            this.auteurDataGridViewTextBoxColumn6.Name = "auteurDataGridViewTextBoxColumn6";
+            this.auteurDataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // videoBindingSource
+            // 
+            this.videoBindingSource.AllowNew = false;
+            this.videoBindingSource.DataSource = typeof(Model.Video);
             // 
             // textPage
             // 
@@ -560,6 +638,37 @@
             this.textGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.textGridView.Size = new System.Drawing.Size(427, 316);
             this.textGridView.TabIndex = 0;
+            this.textGridView.SelectionChanged += new System.EventHandler(this.textGridView_SelectionChanged);
+            this.textGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.textGridView_CellDoubleClick);
+            // 
+            // titreDataGridViewTextBoxColumn7
+            // 
+            this.titreDataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titreDataGridViewTextBoxColumn7.DataPropertyName = "titre";
+            this.titreDataGridViewTextBoxColumn7.HeaderText = "Titre";
+            this.titreDataGridViewTextBoxColumn7.Name = "titreDataGridViewTextBoxColumn7";
+            this.titreDataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // auteurDataGridViewTextBoxColumn7
+            // 
+            this.auteurDataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.auteurDataGridViewTextBoxColumn7.DataPropertyName = "auteur";
+            this.auteurDataGridViewTextBoxColumn7.HeaderText = "Auteur";
+            this.auteurDataGridViewTextBoxColumn7.Name = "auteurDataGridViewTextBoxColumn7";
+            this.auteurDataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn2
+            // 
+            this.typeDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.typeDataGridViewTextBoxColumn2.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn2.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn2.Name = "typeDataGridViewTextBoxColumn2";
+            this.typeDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // texteBindingSource
+            // 
+            this.texteBindingSource.AllowNew = false;
+            this.texteBindingSource.DataSource = typeof(Model.Texte);
             // 
             // mmPage
             // 
@@ -605,106 +714,8 @@
             this.mmGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mmGridView.Size = new System.Drawing.Size(427, 316);
             this.mmGridView.TabIndex = 0;
-            // 
-            // titreDataGridViewTextBoxColumn
-            // 
-            this.titreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titreDataGridViewTextBoxColumn.DataPropertyName = "titre";
-            this.titreDataGridViewTextBoxColumn.HeaderText = "Titre";
-            this.titreDataGridViewTextBoxColumn.Name = "titreDataGridViewTextBoxColumn";
-            this.titreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // auteurDataGridViewTextBoxColumn
-            // 
-            this.auteurDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.auteurDataGridViewTextBoxColumn.DataPropertyName = "auteur";
-            this.auteurDataGridViewTextBoxColumn.HeaderText = "Auteur";
-            this.auteurDataGridViewTextBoxColumn.Name = "auteurDataGridViewTextBoxColumn";
-            this.auteurDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // documentBindingSource
-            // 
-            this.documentBindingSource.AllowNew = false;
-            this.documentBindingSource.DataSource = typeof(Model.Document);
-            // 
-            // titreDataGridViewTextBoxColumn5
-            // 
-            this.titreDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titreDataGridViewTextBoxColumn5.DataPropertyName = "titre";
-            this.titreDataGridViewTextBoxColumn5.HeaderText = "Titre";
-            this.titreDataGridViewTextBoxColumn5.Name = "titreDataGridViewTextBoxColumn5";
-            this.titreDataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // auteurDataGridViewTextBoxColumn5
-            // 
-            this.auteurDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.auteurDataGridViewTextBoxColumn5.DataPropertyName = "auteur";
-            this.auteurDataGridViewTextBoxColumn5.HeaderText = "Auteur";
-            this.auteurDataGridViewTextBoxColumn5.Name = "auteurDataGridViewTextBoxColumn5";
-            this.auteurDataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // audioBindingSource
-            // 
-            this.audioBindingSource.AllowNew = false;
-            this.audioBindingSource.DataSource = typeof(Model.Audio);
-            // 
-            // titreDataGridViewTextBoxColumn6
-            // 
-            this.titreDataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titreDataGridViewTextBoxColumn6.DataPropertyName = "titre";
-            this.titreDataGridViewTextBoxColumn6.HeaderText = "Titre";
-            this.titreDataGridViewTextBoxColumn6.Name = "titreDataGridViewTextBoxColumn6";
-            this.titreDataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // auteurDataGridViewTextBoxColumn6
-            // 
-            this.auteurDataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.auteurDataGridViewTextBoxColumn6.DataPropertyName = "auteur";
-            this.auteurDataGridViewTextBoxColumn6.HeaderText = "Auteur";
-            this.auteurDataGridViewTextBoxColumn6.Name = "auteurDataGridViewTextBoxColumn6";
-            this.auteurDataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // videoBindingSource
-            // 
-            this.videoBindingSource.AllowNew = false;
-            this.videoBindingSource.DataSource = typeof(Model.Video);
-            // 
-            // titreDataGridViewTextBoxColumn7
-            // 
-            this.titreDataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titreDataGridViewTextBoxColumn7.DataPropertyName = "titre";
-            this.titreDataGridViewTextBoxColumn7.HeaderText = "Titre";
-            this.titreDataGridViewTextBoxColumn7.Name = "titreDataGridViewTextBoxColumn7";
-            this.titreDataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // auteurDataGridViewTextBoxColumn7
-            // 
-            this.auteurDataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.auteurDataGridViewTextBoxColumn7.DataPropertyName = "auteur";
-            this.auteurDataGridViewTextBoxColumn7.HeaderText = "Auteur";
-            this.auteurDataGridViewTextBoxColumn7.Name = "auteurDataGridViewTextBoxColumn7";
-            this.auteurDataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn2
-            // 
-            this.typeDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.typeDataGridViewTextBoxColumn2.DataPropertyName = "type";
-            this.typeDataGridViewTextBoxColumn2.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn2.Name = "typeDataGridViewTextBoxColumn2";
-            this.typeDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // texteBindingSource
-            // 
-            this.texteBindingSource.AllowNew = false;
-            this.texteBindingSource.DataSource = typeof(Model.Texte);
+            this.mmGridView.SelectionChanged += new System.EventHandler(this.mmGridView_SelectionChanged);
+            this.mmGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mmGridView_CellDoubleClick);
             // 
             // titreDataGridViewTextBoxColumn8
             // 
@@ -753,30 +764,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.allSplitContainer)).EndInit();
             this.allSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.allGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).EndInit();
             this.audioPage.ResumeLayout(false);
             this.audioSplitContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.audioSplitContainer)).EndInit();
             this.audioSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.audioGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).EndInit();
             this.videoPage.ResumeLayout(false);
             this.videoSplitContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.videoSplitContainer)).EndInit();
             this.videoSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.videoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).EndInit();
             this.textPage.ResumeLayout(false);
             this.textSplitContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textSplitContainer)).EndInit();
             this.textSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).EndInit();
             this.mmPage.ResumeLayout(false);
             this.mmSplitContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mmSplitContainer)).EndInit();
             this.mmSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mmGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.multimediaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
