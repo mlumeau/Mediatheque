@@ -45,7 +45,7 @@ namespace View
                 Article art = new Article(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked, numEditionTextBox.Text, editeurTextBox.Text);
 
                 ctrl.mediatheque.Ajouter(art);
-                ctrl.mainform.refreshLists();
+
                 this.Close();
             }
         }

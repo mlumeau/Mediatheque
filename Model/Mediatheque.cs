@@ -31,6 +31,7 @@ namespace Model
                 documents.Add(_doc); 
                 this.Sauvegarder();
             }
+            
         }
 
         public void Supprimer(Document _doc)

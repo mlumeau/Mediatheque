@@ -45,7 +45,7 @@ namespace View
             Multimedia mm = new Multimedia(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked);
 
             ctrl.mediatheque.Ajouter(mm);
-            ctrl.mainform.refreshLists();
+
             this.Close();
         }
         
