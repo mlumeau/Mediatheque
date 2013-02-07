@@ -356,5 +356,21 @@ namespace View
                 }
             }
         }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (searchBox.Text != "")
+            {
+                documentBindingSource.Filter = "titre LIKE '%" + searchBox.Text + "%' OR auteur LIKE '%" + searchBox.Text + "%'";
+
+                tabControl.SelectedTab = allPage;
+
+                searchBox.Focus();
+            }
+            else
+            {
+                documentBindingSource.Filter = null;
+            }
+        }
     }
 }

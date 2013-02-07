@@ -37,13 +37,6 @@
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.audioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vidéoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.multimédiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.texteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.articleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.livreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,41 +48,48 @@
             this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.headerSplitContainer = new System.Windows.Forms.SplitContainer();
             this.searchBox = new System.Windows.Forms.TextBox();
-            this.searchButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.allPage = new System.Windows.Forms.TabPage();
             this.allSplitContainer = new System.Windows.Forms.SplitContainer();
             this.allGridView = new System.Windows.Forms.DataGridView();
+            this.audioPage = new System.Windows.Forms.TabPage();
+            this.audioSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.audioGridView = new System.Windows.Forms.DataGridView();
+            this.videoPage = new System.Windows.Forms.TabPage();
+            this.videoSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.videoGridView = new System.Windows.Forms.DataGridView();
+            this.textPage = new System.Windows.Forms.TabPage();
+            this.textSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.textGridView = new System.Windows.Forms.DataGridView();
+            this.mmPage = new System.Windows.Forms.TabPage();
+            this.mmSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.mmGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.documentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.audioPage = new System.Windows.Forms.TabPage();
-            this.audioSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.audioGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.audioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.videoPage = new System.Windows.Forms.TabPage();
-            this.videoSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.videoGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.videoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textPage = new System.Windows.Forms.TabPage();
-            this.textSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.textGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.texteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mmPage = new System.Windows.Forms.TabPage();
-            this.mmSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.mmGridView = new System.Windows.Forms.DataGridView();
             this.titreDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.multimediaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vidéoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.multimédiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.texteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.articleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerSplitContainer)).BeginInit();
             this.headerSplitContainer.Panel1.SuspendLayout();
@@ -101,31 +101,32 @@
             this.allSplitContainer.Panel1.SuspendLayout();
             this.allSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.allGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).BeginInit();
             this.audioPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.audioSplitContainer)).BeginInit();
             this.audioSplitContainer.Panel1.SuspendLayout();
             this.audioSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.audioGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).BeginInit();
             this.videoPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.videoSplitContainer)).BeginInit();
             this.videoSplitContainer.Panel1.SuspendLayout();
             this.videoSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.videoGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).BeginInit();
             this.textPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textSplitContainer)).BeginInit();
             this.textSplitContainer.Panel1.SuspendLayout();
             this.textSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).BeginInit();
             this.mmPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mmSplitContainer)).BeginInit();
             this.mmSplitContainer.Panel1.SuspendLayout();
             this.mmSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mmGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.multimediaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BottomToolStripPanel
@@ -188,64 +189,6 @@
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "&Fichier";
-            // 
-            // ouvrirToolStripMenuItem
-            // 
-            this.ouvrirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.audioToolStripMenuItem,
-            this.vidéoToolStripMenuItem,
-            this.multimédiaToolStripMenuItem,
-            this.texteToolStripMenuItem});
-            this.ouvrirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ouvrirToolStripMenuItem.Image")));
-            this.ouvrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.ouvrirToolStripMenuItem.Text = "&Ajouter un document...";
-            // 
-            // audioToolStripMenuItem
-            // 
-            this.audioToolStripMenuItem.Name = "audioToolStripMenuItem";
-            this.audioToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.audioToolStripMenuItem.Text = "Audio";
-            this.audioToolStripMenuItem.Click += new System.EventHandler(this.audioToolStripMenuItem_Click);
-            // 
-            // vidéoToolStripMenuItem
-            // 
-            this.vidéoToolStripMenuItem.Name = "vidéoToolStripMenuItem";
-            this.vidéoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.vidéoToolStripMenuItem.Text = "Vidéo";
-            this.vidéoToolStripMenuItem.Click += new System.EventHandler(this.vidéoToolStripMenuItem_Click);
-            // 
-            // multimédiaToolStripMenuItem
-            // 
-            this.multimédiaToolStripMenuItem.Name = "multimédiaToolStripMenuItem";
-            this.multimédiaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.multimédiaToolStripMenuItem.Text = "Multimédia";
-            this.multimédiaToolStripMenuItem.Click += new System.EventHandler(this.multimédiaToolStripMenuItem_Click);
-            // 
-            // texteToolStripMenuItem
-            // 
-            this.texteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.articleToolStripMenuItem,
-            this.livreToolStripMenuItem});
-            this.texteToolStripMenuItem.Name = "texteToolStripMenuItem";
-            this.texteToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.texteToolStripMenuItem.Text = "Texte";
-            // 
-            // articleToolStripMenuItem
-            // 
-            this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
-            this.articleToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.articleToolStripMenuItem.Text = "Article";
-            this.articleToolStripMenuItem.Click += new System.EventHandler(this.articleToolStripMenuItem_Click);
-            // 
-            // livreToolStripMenuItem
-            // 
-            this.livreToolStripMenuItem.Name = "livreToolStripMenuItem";
-            this.livreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.livreToolStripMenuItem.Text = "Livre";
-            this.livreToolStripMenuItem.Click += new System.EventHandler(this.livreToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
@@ -323,8 +266,8 @@
             // 
             // headerSplitContainer.Panel2
             // 
+            this.headerSplitContainer.Panel2.Controls.Add(this.pictureBox1);
             this.headerSplitContainer.Panel2.Controls.Add(this.searchBox);
-            this.headerSplitContainer.Panel2.Controls.Add(this.searchButton);
             this.headerSplitContainer.Panel2MinSize = 0;
             this.headerSplitContainer.Size = new System.Drawing.Size(739, 34);
             this.headerSplitContainer.SplitterDistance = 238;
@@ -334,20 +277,11 @@
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(281, 7);
+            this.searchBox.Location = new System.Drawing.Point(341, 4);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(126, 20);
             this.searchBox.TabIndex = 4;
-            // 
-            // searchButton
-            // 
-            this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchButton.Location = new System.Drawing.Point(413, 3);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(77, 26);
-            this.searchButton.TabIndex = 5;
-            this.searchButton.Text = "Rechercher";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // statusStrip1
             // 
@@ -430,35 +364,6 @@
             this.allGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allGridView_CellDoubleClick);
             this.allGridView.SelectionChanged += new System.EventHandler(this.allGridView_SelectionChanged);
             // 
-            // titreDataGridViewTextBoxColumn
-            // 
-            this.titreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titreDataGridViewTextBoxColumn.DataPropertyName = "titre";
-            this.titreDataGridViewTextBoxColumn.HeaderText = "Titre";
-            this.titreDataGridViewTextBoxColumn.Name = "titreDataGridViewTextBoxColumn";
-            this.titreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // auteurDataGridViewTextBoxColumn
-            // 
-            this.auteurDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.auteurDataGridViewTextBoxColumn.DataPropertyName = "auteur";
-            this.auteurDataGridViewTextBoxColumn.HeaderText = "Auteur";
-            this.auteurDataGridViewTextBoxColumn.Name = "auteurDataGridViewTextBoxColumn";
-            this.auteurDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // documentBindingSource
-            // 
-            this.documentBindingSource.AllowNew = false;
-            this.documentBindingSource.DataSource = typeof(Model.Document);
-            // 
             // audioPage
             // 
             this.audioPage.Controls.Add(this.audioSplitContainer);
@@ -479,8 +384,8 @@
             // audioSplitContainer.Panel1
             // 
             this.audioSplitContainer.Panel1.Controls.Add(this.audioGridView);
-            this.audioSplitContainer.Size = new System.Drawing.Size(594, 316);
-            this.audioSplitContainer.SplitterDistance = 427;
+            this.audioSplitContainer.Size = new System.Drawing.Size(663, 316);
+            this.audioSplitContainer.SplitterDistance = 476;
             this.audioSplitContainer.TabIndex = 1;
             // 
             // audioGridView
@@ -501,31 +406,10 @@
             this.audioGridView.Name = "audioGridView";
             this.audioGridView.ReadOnly = true;
             this.audioGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.audioGridView.Size = new System.Drawing.Size(427, 316);
+            this.audioGridView.Size = new System.Drawing.Size(476, 316);
             this.audioGridView.TabIndex = 0;
             this.audioGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.audioGridView_CellDoubleClick);
             this.audioGridView.SelectionChanged += new System.EventHandler(this.audioGridView_SelectionChanged);
-            // 
-            // titreDataGridViewTextBoxColumn5
-            // 
-            this.titreDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titreDataGridViewTextBoxColumn5.DataPropertyName = "titre";
-            this.titreDataGridViewTextBoxColumn5.HeaderText = "Titre";
-            this.titreDataGridViewTextBoxColumn5.Name = "titreDataGridViewTextBoxColumn5";
-            this.titreDataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // auteurDataGridViewTextBoxColumn5
-            // 
-            this.auteurDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.auteurDataGridViewTextBoxColumn5.DataPropertyName = "auteur";
-            this.auteurDataGridViewTextBoxColumn5.HeaderText = "Auteur";
-            this.auteurDataGridViewTextBoxColumn5.Name = "auteurDataGridViewTextBoxColumn5";
-            this.auteurDataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // audioBindingSource
-            // 
-            this.audioBindingSource.AllowNew = false;
-            this.audioBindingSource.DataSource = typeof(Model.Audio);
             // 
             // videoPage
             // 
@@ -547,8 +431,8 @@
             // videoSplitContainer.Panel1
             // 
             this.videoSplitContainer.Panel1.Controls.Add(this.videoGridView);
-            this.videoSplitContainer.Size = new System.Drawing.Size(594, 316);
-            this.videoSplitContainer.SplitterDistance = 426;
+            this.videoSplitContainer.Size = new System.Drawing.Size(640, 316);
+            this.videoSplitContainer.SplitterDistance = 458;
             this.videoSplitContainer.TabIndex = 1;
             // 
             // videoGridView
@@ -568,31 +452,10 @@
             this.videoGridView.Name = "videoGridView";
             this.videoGridView.ReadOnly = true;
             this.videoGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.videoGridView.Size = new System.Drawing.Size(426, 316);
+            this.videoGridView.Size = new System.Drawing.Size(458, 316);
             this.videoGridView.TabIndex = 0;
             this.videoGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.videoGridView_CellDoubleClick);
             this.videoGridView.SelectionChanged += new System.EventHandler(this.videoGridView_SelectionChanged);
-            // 
-            // titreDataGridViewTextBoxColumn6
-            // 
-            this.titreDataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titreDataGridViewTextBoxColumn6.DataPropertyName = "titre";
-            this.titreDataGridViewTextBoxColumn6.HeaderText = "Titre";
-            this.titreDataGridViewTextBoxColumn6.Name = "titreDataGridViewTextBoxColumn6";
-            this.titreDataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // auteurDataGridViewTextBoxColumn6
-            // 
-            this.auteurDataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.auteurDataGridViewTextBoxColumn6.DataPropertyName = "auteur";
-            this.auteurDataGridViewTextBoxColumn6.HeaderText = "Auteur";
-            this.auteurDataGridViewTextBoxColumn6.Name = "auteurDataGridViewTextBoxColumn6";
-            this.auteurDataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // videoBindingSource
-            // 
-            this.videoBindingSource.AllowNew = false;
-            this.videoBindingSource.DataSource = typeof(Model.Video);
             // 
             // textPage
             // 
@@ -614,8 +477,8 @@
             // textSplitContainer.Panel1
             // 
             this.textSplitContainer.Panel1.Controls.Add(this.textGridView);
-            this.textSplitContainer.Size = new System.Drawing.Size(594, 316);
-            this.textSplitContainer.SplitterDistance = 427;
+            this.textSplitContainer.Size = new System.Drawing.Size(617, 316);
+            this.textSplitContainer.SplitterDistance = 443;
             this.textSplitContainer.TabIndex = 1;
             // 
             // textGridView
@@ -636,39 +499,10 @@
             this.textGridView.Name = "textGridView";
             this.textGridView.ReadOnly = true;
             this.textGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.textGridView.Size = new System.Drawing.Size(427, 316);
+            this.textGridView.Size = new System.Drawing.Size(443, 316);
             this.textGridView.TabIndex = 0;
             this.textGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.textGridView_CellDoubleClick);
             this.textGridView.SelectionChanged += new System.EventHandler(this.textGridView_SelectionChanged);
-            // 
-            // titreDataGridViewTextBoxColumn7
-            // 
-            this.titreDataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titreDataGridViewTextBoxColumn7.DataPropertyName = "titre";
-            this.titreDataGridViewTextBoxColumn7.HeaderText = "Titre";
-            this.titreDataGridViewTextBoxColumn7.Name = "titreDataGridViewTextBoxColumn7";
-            this.titreDataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // auteurDataGridViewTextBoxColumn7
-            // 
-            this.auteurDataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.auteurDataGridViewTextBoxColumn7.DataPropertyName = "auteur";
-            this.auteurDataGridViewTextBoxColumn7.HeaderText = "Auteur";
-            this.auteurDataGridViewTextBoxColumn7.Name = "auteurDataGridViewTextBoxColumn7";
-            this.auteurDataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn2
-            // 
-            this.typeDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.typeDataGridViewTextBoxColumn2.DataPropertyName = "type";
-            this.typeDataGridViewTextBoxColumn2.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn2.Name = "typeDataGridViewTextBoxColumn2";
-            this.typeDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // texteBindingSource
-            // 
-            this.texteBindingSource.AllowNew = false;
-            this.texteBindingSource.DataSource = typeof(Model.Texte);
             // 
             // mmPage
             // 
@@ -717,6 +551,106 @@
             this.mmGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mmGridView_CellDoubleClick);
             this.mmGridView.SelectionChanged += new System.EventHandler(this.mmGridView_SelectionChanged);
             // 
+            // titreDataGridViewTextBoxColumn
+            // 
+            this.titreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titreDataGridViewTextBoxColumn.DataPropertyName = "titre";
+            this.titreDataGridViewTextBoxColumn.HeaderText = "Titre";
+            this.titreDataGridViewTextBoxColumn.Name = "titreDataGridViewTextBoxColumn";
+            this.titreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // auteurDataGridViewTextBoxColumn
+            // 
+            this.auteurDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.auteurDataGridViewTextBoxColumn.DataPropertyName = "auteur";
+            this.auteurDataGridViewTextBoxColumn.HeaderText = "Auteur";
+            this.auteurDataGridViewTextBoxColumn.Name = "auteurDataGridViewTextBoxColumn";
+            this.auteurDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // documentBindingSource
+            // 
+            this.documentBindingSource.AllowNew = false;
+            this.documentBindingSource.DataSource = typeof(Model.Document);
+            // 
+            // titreDataGridViewTextBoxColumn5
+            // 
+            this.titreDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titreDataGridViewTextBoxColumn5.DataPropertyName = "titre";
+            this.titreDataGridViewTextBoxColumn5.HeaderText = "Titre";
+            this.titreDataGridViewTextBoxColumn5.Name = "titreDataGridViewTextBoxColumn5";
+            this.titreDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // auteurDataGridViewTextBoxColumn5
+            // 
+            this.auteurDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.auteurDataGridViewTextBoxColumn5.DataPropertyName = "auteur";
+            this.auteurDataGridViewTextBoxColumn5.HeaderText = "Auteur";
+            this.auteurDataGridViewTextBoxColumn5.Name = "auteurDataGridViewTextBoxColumn5";
+            this.auteurDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // audioBindingSource
+            // 
+            this.audioBindingSource.AllowNew = false;
+            this.audioBindingSource.DataSource = typeof(Model.Audio);
+            // 
+            // titreDataGridViewTextBoxColumn6
+            // 
+            this.titreDataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titreDataGridViewTextBoxColumn6.DataPropertyName = "titre";
+            this.titreDataGridViewTextBoxColumn6.HeaderText = "Titre";
+            this.titreDataGridViewTextBoxColumn6.Name = "titreDataGridViewTextBoxColumn6";
+            this.titreDataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // auteurDataGridViewTextBoxColumn6
+            // 
+            this.auteurDataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.auteurDataGridViewTextBoxColumn6.DataPropertyName = "auteur";
+            this.auteurDataGridViewTextBoxColumn6.HeaderText = "Auteur";
+            this.auteurDataGridViewTextBoxColumn6.Name = "auteurDataGridViewTextBoxColumn6";
+            this.auteurDataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // videoBindingSource
+            // 
+            this.videoBindingSource.AllowNew = false;
+            this.videoBindingSource.DataSource = typeof(Model.Video);
+            // 
+            // titreDataGridViewTextBoxColumn7
+            // 
+            this.titreDataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titreDataGridViewTextBoxColumn7.DataPropertyName = "titre";
+            this.titreDataGridViewTextBoxColumn7.HeaderText = "Titre";
+            this.titreDataGridViewTextBoxColumn7.Name = "titreDataGridViewTextBoxColumn7";
+            this.titreDataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // auteurDataGridViewTextBoxColumn7
+            // 
+            this.auteurDataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.auteurDataGridViewTextBoxColumn7.DataPropertyName = "auteur";
+            this.auteurDataGridViewTextBoxColumn7.HeaderText = "Auteur";
+            this.auteurDataGridViewTextBoxColumn7.Name = "auteurDataGridViewTextBoxColumn7";
+            this.auteurDataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn2
+            // 
+            this.typeDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.typeDataGridViewTextBoxColumn2.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn2.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn2.Name = "typeDataGridViewTextBoxColumn2";
+            this.typeDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // texteBindingSource
+            // 
+            this.texteBindingSource.AllowNew = false;
+            this.texteBindingSource.DataSource = typeof(Model.Texte);
+            // 
             // titreDataGridViewTextBoxColumn8
             // 
             this.titreDataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -737,6 +671,73 @@
             // 
             this.multimediaBindingSource.AllowNew = false;
             this.multimediaBindingSource.DataSource = typeof(Model.Multimedia);
+            // 
+            // ouvrirToolStripMenuItem
+            // 
+            this.ouvrirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.audioToolStripMenuItem,
+            this.vidéoToolStripMenuItem,
+            this.multimédiaToolStripMenuItem,
+            this.texteToolStripMenuItem});
+            this.ouvrirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ouvrirToolStripMenuItem.Image")));
+            this.ouvrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
+            this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.ouvrirToolStripMenuItem.Text = "&Ajouter un document...";
+            // 
+            // audioToolStripMenuItem
+            // 
+            this.audioToolStripMenuItem.Name = "audioToolStripMenuItem";
+            this.audioToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.audioToolStripMenuItem.Text = "Audio";
+            this.audioToolStripMenuItem.Click += new System.EventHandler(this.audioToolStripMenuItem_Click);
+            // 
+            // vidéoToolStripMenuItem
+            // 
+            this.vidéoToolStripMenuItem.Name = "vidéoToolStripMenuItem";
+            this.vidéoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.vidéoToolStripMenuItem.Text = "Vidéo";
+            this.vidéoToolStripMenuItem.Click += new System.EventHandler(this.vidéoToolStripMenuItem_Click);
+            // 
+            // multimédiaToolStripMenuItem
+            // 
+            this.multimédiaToolStripMenuItem.Name = "multimédiaToolStripMenuItem";
+            this.multimédiaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.multimédiaToolStripMenuItem.Text = "Multimédia";
+            this.multimédiaToolStripMenuItem.Click += new System.EventHandler(this.multimédiaToolStripMenuItem_Click);
+            // 
+            // texteToolStripMenuItem
+            // 
+            this.texteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.articleToolStripMenuItem,
+            this.livreToolStripMenuItem});
+            this.texteToolStripMenuItem.Name = "texteToolStripMenuItem";
+            this.texteToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.texteToolStripMenuItem.Text = "Texte";
+            // 
+            // articleToolStripMenuItem
+            // 
+            this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
+            this.articleToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.articleToolStripMenuItem.Text = "Article";
+            this.articleToolStripMenuItem.Click += new System.EventHandler(this.articleToolStripMenuItem_Click);
+            // 
+            // livreToolStripMenuItem
+            // 
+            this.livreToolStripMenuItem.Name = "livreToolStripMenuItem";
+            this.livreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.livreToolStripMenuItem.Text = "Livre";
+            this.livreToolStripMenuItem.Click += new System.EventHandler(this.livreToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::View.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(473, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(18, 20);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -764,31 +765,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.allSplitContainer)).EndInit();
             this.allSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.allGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).EndInit();
             this.audioPage.ResumeLayout(false);
             this.audioSplitContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.audioSplitContainer)).EndInit();
             this.audioSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.audioGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).EndInit();
             this.videoPage.ResumeLayout(false);
             this.videoSplitContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.videoSplitContainer)).EndInit();
             this.videoSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.videoGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).EndInit();
             this.textPage.ResumeLayout(false);
             this.textSplitContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textSplitContainer)).EndInit();
             this.textSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).EndInit();
             this.mmPage.ResumeLayout(false);
             this.mmSplitContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mmSplitContainer)).EndInit();
             this.mmSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mmGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.multimediaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -815,7 +817,6 @@
         private System.Windows.Forms.SplitContainer headerSplitContainer;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage allPage;
         private System.Windows.Forms.TabPage audioPage;
@@ -856,6 +857,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titreDataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn auteurDataGridViewTextBoxColumn8;
         private System.Windows.Forms.BindingSource multimediaBindingSource;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
 
     }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;
+using System.Globalization;
 
 namespace View
 {
@@ -42,6 +43,7 @@ namespace View
 
         private void validerButton_Click(object sender, EventArgs e)
         {
+            if (titreTextBox.Text == "" || auteurTextBox.Text == "" || editeurTextBox.Text == "" || DateTime.ParseExact(anneeParutionTextBox.Text, "dd'/'MM'/'yyyy", CultureInfo.InvariantCulture).ToString( "dd'/'MM'/'yyyy") != anneeParutionTextBox.Text || cheminTextBox.Text == "")
             try
             {
                 if (titreTextBox.Text == "" || auteurTextBox.Text == "" || editeurTextBox.Text == "" || cheminTextBox.Text == "")
@@ -59,6 +61,11 @@ namespace View
             }
             catch(FormatException)
             {
+                Livre l = new Livre(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked, DateTime.ParseExact(anneeParutionTextBox.Text, "dd'/'MM'/'yyyy", CultureInfo.InvariantCulture), editeurTextBox.Text);
+
+                ctrl.mediatheque.Ajouter(l);
+
+                this.Close();
                 MessageBox.Show("Date incorrecte !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
