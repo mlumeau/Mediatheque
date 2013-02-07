@@ -30,7 +30,6 @@ namespace View
             texteBindingSource.DataSource = m.GetDocuments<Texte>();
             multimediaBindingSource.DataSource = m.GetDocuments<Multimedia>();
 
-            
 
             tabControl.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem);
         }
@@ -134,12 +133,12 @@ namespace View
             {
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Article))
                 {
-                    ModifArticleForm f = new ModifArticleForm((Article)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                    ModifArticleForm f = new ModifArticleForm((Article)textGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Livre))
                 {
-                    ModifLivreForm f = new ModifLivreForm((Livre)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                    ModifLivreForm f = new ModifLivreForm((Livre)textGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }
@@ -147,7 +146,7 @@ namespace View
             {
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Audio))
                 {
-                    ModifAudioForm f = new ModifAudioForm((Audio)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                    ModifAudioForm f = new ModifAudioForm((Audio)audioGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }
@@ -155,7 +154,7 @@ namespace View
             {
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Multimedia))
                 {
-                    ModifMMForm f = new ModifMMForm((Multimedia)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                    ModifMMForm f = new ModifMMForm((Multimedia)mmGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }
@@ -163,7 +162,7 @@ namespace View
             {
                 if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Video))
                 {
-                    ModifVideoForm f = new ModifVideoForm((Video)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                    ModifVideoForm f = new ModifVideoForm((Video)videoGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }
@@ -171,46 +170,55 @@ namespace View
 
         public void refreshLists()
         {
+            audioBindingSource.DataSource = null;
+            texteBindingSource.DataSource = null;
+            multimediaBindingSource.DataSource = null;
+            videoBindingSource.DataSource = null;
+            documentBindingSource.DataSource = null;
 
-            foreach (Document d in m.documents)
-            {
-                if (!documentBindingSource.Contains(d))
-                    documentBindingSource.Add(d);
-            }
-            foreach (Audio a in m.GetDocuments<Audio>())
-            {
-                if (!audioBindingSource.Contains(a))
-                    audioBindingSource.Add(a);
-            }
-            foreach (Video v in m.GetDocuments<Video>())
-            {
-                if (!videoBindingSource.Contains(v))
-                    videoBindingSource.Add(v);
-            }
-            foreach (Texte t in m.GetDocuments<Texte>())
-            {
-                if (!texteBindingSource.Contains(t))
-                    texteBindingSource.Add(t);
-            }
-            foreach (Multimedia mm in m.GetDocuments<Multimedia>())
-            {
-                if (!multimediaBindingSource.Contains(mm))
-                    multimediaBindingSource.Add(mm);
-            }
+            documentBindingSource.DataSource = m.documents;
+            audioBindingSource.DataSource = m.GetDocuments<Audio>();
+            videoBindingSource.DataSource = m.GetDocuments<Video>();
+            texteBindingSource.DataSource = m.GetDocuments<Texte>();
+            multimediaBindingSource.DataSource = m.GetDocuments<Multimedia>();
             
+            
+
             m.Sauvegarder();
         }
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (tabControl.SelectedTab == allPage)
+            {
+                m.Supprimer((Document)allGridView.SelectedRows[0].DataBoundItem);
+            }
+            if (tabControl.SelectedTab == textPage)
+            {
+                m.Supprimer((Document)textGridView.SelectedRows[0].DataBoundItem);
+            }
+            if (tabControl.SelectedTab == audioPage)
+            {
+                m.Supprimer((Document)audioGridView.SelectedRows[0].DataBoundItem);
+            }
+            if (tabControl.SelectedTab == mmPage)
+            {
+                m.Supprimer((Document)mmGridView.SelectedRows[0].DataBoundItem);
+            }
+            if (tabControl.SelectedTab == videoPage)
+            {
+                m.Supprimer((Document)videoGridView.SelectedRows[0].DataBoundItem);
+            }
+            refreshLists();
         }
 
         private void allGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if (ctrl.mediatheque.documents.Count() > 0)
+            allSplitContainer.Panel2.Controls.Clear();
+
+            if (allGridView.CurrentRow != null)
             {
-                allSplitContainer.Panel2.Controls.Clear();
+                
                 Label text = new Label();
                 text.AutoSize = true;
                 text.Font = new Font("Courier New", text.Font.Size);
@@ -223,9 +231,11 @@ namespace View
 
         private void audioGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if (ctrl.mediatheque.GetDocuments<Audio>().Count() > 0)
+            audioSplitContainer.Panel2.Controls.Clear();
+
+            if (ctrl.mediatheque.GetDocuments<Audio>().Count() > 0 && audioGridView.CurrentRow != null)
             {
-                audioSplitContainer.Panel2.Controls.Clear();
+                
                 Label text = new Label();
                 text.AutoSize = true;
                 text.Font = new Font("Courier New", text.Font.Size);
@@ -238,9 +248,11 @@ namespace View
 
         private void videoGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if (ctrl.mediatheque.GetDocuments<Video>().Count() > 0)
+            videoSplitContainer.Panel2.Controls.Clear();
+
+            if (ctrl.mediatheque.GetDocuments<Video>().Count() > 0 && videoGridView.CurrentRow != null)
             {
-                videoSplitContainer.Panel2.Controls.Clear();
+                
                 Label text = new Label();
                 text.AutoSize = true;
                 text.Font = new Font("Courier New", text.Font.Size);
@@ -254,7 +266,8 @@ namespace View
         private void textGridView_SelectionChanged(object sender, EventArgs e)
         {
             textSplitContainer.Panel2.Controls.Clear();
-            if (ctrl.mediatheque.GetDocuments<Texte>().Count() > 0)
+
+            if (ctrl.mediatheque.GetDocuments<Texte>().Count() > 0 && textGridView.CurrentRow != null)
             {
                 Label text = new Label();
                 text.AutoSize = true;
@@ -268,9 +281,11 @@ namespace View
 
         private void mmGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if (ctrl.mediatheque.GetDocuments<Multimedia>().Count() > 0)
+            mmSplitContainer.Panel2.Controls.Clear();
+
+            if (ctrl.mediatheque.GetDocuments<Multimedia>().Count() > 0 && mmGridView.CurrentRow != null)
             {
-                mmSplitContainer.Panel2.Controls.Clear();
+                
                 Label text = new Label();
                 text.AutoSize = true;
                 text.Font = new Font("Courier New", text.Font.Size);
@@ -281,17 +296,16 @@ namespace View
             }
         }
 
-        private void allGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
 
         private void allGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
-                Document d = (Document)allGridView.SelectedRows[0].DataBoundItem;
-                System.Diagnostics.Process.Start(d.path);
+                if (allGridView.Rows[e.RowIndex].Cells[1].Value != null)
+                {
+                    Document d = (Document)allGridView.SelectedRows[0].DataBoundItem;
+                    System.Diagnostics.Process.Start(d.path);
+                }
             }
         }
 
@@ -299,8 +313,11 @@ namespace View
         {
             if (e.RowIndex != -1)
             {
-                Document d = (Document)audioGridView.SelectedRows[0].DataBoundItem;
-                System.Diagnostics.Process.Start(d.path);
+                if (audioGridView.Rows[e.RowIndex].Cells[1].Value != null)
+                {
+                    Document d = (Document)audioGridView.SelectedRows[0].DataBoundItem;
+                    System.Diagnostics.Process.Start(d.path);
+                }
             }
         }
 
@@ -308,8 +325,11 @@ namespace View
         {
             if (e.RowIndex != -1)
             {
-                Document d = (Document)videoGridView.SelectedRows[0].DataBoundItem;
-                System.Diagnostics.Process.Start(d.path);
+                if (videoGridView.Rows[e.RowIndex].Cells[1].Value != null)
+                {
+                    Document d = (Document)videoGridView.SelectedRows[0].DataBoundItem;
+                    System.Diagnostics.Process.Start(d.path);
+                }
             }
         }
 
@@ -317,8 +337,11 @@ namespace View
         {
             if (e.RowIndex != -1)
             {
-                Document d = (Document)textGridView.SelectedRows[0].DataBoundItem;
-                System.Diagnostics.Process.Start(d.path);
+                if (textGridView.Rows[e.RowIndex].Cells[1].Value != null)
+                {
+                    Document d = (Document)textGridView.SelectedRows[0].DataBoundItem;
+                    System.Diagnostics.Process.Start(d.path);
+                }
             }
         }
 
@@ -326,8 +349,11 @@ namespace View
         {
             if (e.RowIndex != -1)
             {
-                Document d = (Document)mmGridView.SelectedRows[0].DataBoundItem;
-                System.Diagnostics.Process.Start(d.path);
+                if (mmGridView.Rows[e.RowIndex].Cells[1].Value != null)
+                {
+                    Document d = (Document)mmGridView.SelectedRows[0].DataBoundItem;
+                    System.Diagnostics.Process.Start(d.path);
+                }
             }
         }
     }
