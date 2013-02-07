@@ -43,9 +43,9 @@ namespace Model
             }
         }
 
-        public IEnumerable<T> GetDocuments<T>() where T : Document
+        public List<T> GetDocuments<T>() where T : Document
         {
-            return documents.OfType<T>(); 
+            return documents.OfType<T>().ToList(); 
         }
 
         public IEnumerable<T> GetDocumentsByAuteur<T>() where T : Document

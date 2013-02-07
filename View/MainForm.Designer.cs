@@ -334,7 +334,7 @@
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(278, 7);
+            this.searchBox.Location = new System.Drawing.Point(281, 7);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(126, 20);
             this.searchBox.TabIndex = 4;
@@ -342,7 +342,7 @@
             // searchButton
             // 
             this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchButton.Location = new System.Drawing.Point(410, 3);
+            this.searchButton.Location = new System.Drawing.Point(413, 3);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(77, 26);
             this.searchButton.TabIndex = 5;
@@ -427,8 +427,8 @@
             this.allGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.allGridView.Size = new System.Drawing.Size(347, 316);
             this.allGridView.TabIndex = 0;
-            this.allGridView.SelectionChanged += new System.EventHandler(this.allGridView_SelectionChanged);
             this.allGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allGridView_CellDoubleClick);
+            this.allGridView.SelectionChanged += new System.EventHandler(this.allGridView_SelectionChanged);
             // 
             // titreDataGridViewTextBoxColumn
             // 
@@ -487,6 +487,7 @@
             // 
             this.audioGridView.AllowUserToAddRows = false;
             this.audioGridView.AllowUserToDeleteRows = false;
+            this.audioGridView.AllowUserToResizeColumns = false;
             this.audioGridView.AllowUserToResizeRows = false;
             this.audioGridView.AutoGenerateColumns = false;
             this.audioGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -502,8 +503,8 @@
             this.audioGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.audioGridView.Size = new System.Drawing.Size(427, 316);
             this.audioGridView.TabIndex = 0;
-            this.audioGridView.SelectionChanged += new System.EventHandler(this.audioGridView_SelectionChanged);
             this.audioGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.audioGridView_CellDoubleClick);
+            this.audioGridView.SelectionChanged += new System.EventHandler(this.audioGridView_SelectionChanged);
             // 
             // titreDataGridViewTextBoxColumn5
             // 
@@ -569,8 +570,8 @@
             this.videoGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.videoGridView.Size = new System.Drawing.Size(426, 316);
             this.videoGridView.TabIndex = 0;
-            this.videoGridView.SelectionChanged += new System.EventHandler(this.videoGridView_SelectionChanged);
             this.videoGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.videoGridView_CellDoubleClick);
+            this.videoGridView.SelectionChanged += new System.EventHandler(this.videoGridView_SelectionChanged);
             // 
             // titreDataGridViewTextBoxColumn6
             // 
@@ -637,8 +638,8 @@
             this.textGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.textGridView.Size = new System.Drawing.Size(427, 316);
             this.textGridView.TabIndex = 0;
-            this.textGridView.SelectionChanged += new System.EventHandler(this.textGridView_SelectionChanged);
             this.textGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.textGridView_CellDoubleClick);
+            this.textGridView.SelectionChanged += new System.EventHandler(this.textGridView_SelectionChanged);
             // 
             // titreDataGridViewTextBoxColumn7
             // 
@@ -713,8 +714,8 @@
             this.mmGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mmGridView.Size = new System.Drawing.Size(427, 316);
             this.mmGridView.TabIndex = 0;
-            this.mmGridView.SelectionChanged += new System.EventHandler(this.mmGridView_SelectionChanged);
             this.mmGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mmGridView_CellDoubleClick);
+            this.mmGridView.SelectionChanged += new System.EventHandler(this.mmGridView_SelectionChanged);
             // 
             // titreDataGridViewTextBoxColumn8
             // 

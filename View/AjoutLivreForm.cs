@@ -42,18 +42,27 @@ namespace View
 
         private void validerButton_Click(object sender, EventArgs e)
         {
-            if (titreTextBox.Text == "" || auteurTextBox.Text == "" || editeurTextBox.Text == "" || DateTime.Parse(anneeParutionTextBox.Text).ToString() != anneeParutionTextBox.Text || cheminTextBox.Text == "")
+            try
             {
-                MessageBox.Show("Veuillez remplir tous les champs correctement.");
+                if (titreTextBox.Text == "" || auteurTextBox.Text == "" || editeurTextBox.Text == "" || cheminTextBox.Text == "")
+                {
+                    MessageBox.Show("Veuillez remplir tous les champs correctement.");
+                }
+                else
+                {
+                    Livre l = new Livre(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked, DateTime.Parse(anneeParutionTextBox.Text), editeurTextBox.Text);
+
+                    ctrl.mediatheque.Ajouter(l);
+                    ctrl.mainform.refreshLists();
+                    this.Close();
+                }
             }
-            else
+            catch(FormatException)
             {
-                Livre l = new Livre(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked, DateTime.Parse(anneeParutionTextBox.Text), editeurTextBox.Text);
-
-                ctrl.mediatheque.Ajouter(l);
-
-                this.Close();
+                MessageBox.Show("Date incorrecte !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+           
         }
     }
 }
