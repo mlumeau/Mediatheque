@@ -42,11 +42,33 @@ namespace View
 
         private void validerButton_Click(object sender, EventArgs e)
         {
-            Video v = new Video(titreTextBox.Text,auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked);
-
-            ctrl.mediatheque.Ajouter(v);
-            ctrl.mainform.refreshLists();
-            this.Close();
+            if (titreTextBox.Text == "" || auteurTextBox.Text == "" || cheminTextBox.Text == "")
+            {
+                MessageBox.Show("Veuillez remplir tous les champs correctement.");
+            }
+            else
+            {
+                Video v = new Video(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked);
+                bool found = false;
+                foreach (Document d in ctrl.mediatheque.GetDocuments<Video>())
+                {
+                    if (v.path == d.path)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                {
+                    ctrl.mediatheque.Ajouter(v);
+                    ctrl.mainform.refreshLists();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ce fichier est déjà présent dans la médiathèque.");
+                }
+            }
         }
 
     }

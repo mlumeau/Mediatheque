@@ -25,7 +25,7 @@ namespace Model
                 "Album      : " + id3v2Tag.Album + "\n" +
                 "Genre      : " + id3v2Tag.FirstGenre + "\n" +
                 "Année      : " + id3v2Tag.Year + "\n" +
-                "Longueur   : " + f.Properties.Duration + "\n" +
+                "Longueur   : " + f.Properties.Duration.ToString(@"mm\:ss") + "\n" +
                 "Bitrate    : " + f.Properties.AudioBitrate + "kbps\n";
             return res; 
 

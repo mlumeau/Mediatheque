@@ -26,7 +26,7 @@ namespace Model
             string res =
                 "Auteur      : " + this.auteur + "\n" +
                 "Editeur     : " + this.editeur + "\n" +
-                "Parution    : " + this.parution + "\n";
+                "Parution    : " + this.parution.ToString("dd'/'MM'/'yyyy") + "\n";
 
             return res;
         }

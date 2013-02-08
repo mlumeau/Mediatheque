@@ -42,11 +42,28 @@ namespace View
             }
             else
             {
+                
                 Article art = new Article(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked, numEditionTextBox.Text, editeurTextBox.Text);
-
-                ctrl.mediatheque.Ajouter(art);
-                ctrl.mainform.refreshLists();
-                this.Close();
+                
+                bool found = false;
+                foreach (Document d in ctrl.mediatheque.GetDocuments<Texte>())
+                {
+                    if (art.path == d.path)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                {
+                    ctrl.mediatheque.Ajouter(art);
+                    ctrl.mainform.refreshLists();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ce fichier est déjà présent dans la médiathèque.");
+                }
             }
         }
     }

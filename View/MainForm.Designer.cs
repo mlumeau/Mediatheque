@@ -37,6 +37,13 @@
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vidéoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.multimédiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.texteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.articleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +54,7 @@
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.headerSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tabControl = new System.Windows.Forms.TabControl();
@@ -82,19 +90,12 @@
             this.titreDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auteurDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.multimediaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.audioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vidéoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.multimédiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.texteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.articleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.livreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerSplitContainer)).BeginInit();
             this.headerSplitContainer.Panel1.SuspendLayout();
             this.headerSplitContainer.Panel2.SuspendLayout();
             this.headerSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl.SuspendLayout();
             this.allPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.allSplitContainer)).BeginInit();
@@ -126,7 +127,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.multimediaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BottomToolStripPanel
@@ -190,6 +190,64 @@
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "&Fichier";
             // 
+            // ouvrirToolStripMenuItem
+            // 
+            this.ouvrirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.audioToolStripMenuItem,
+            this.vidéoToolStripMenuItem,
+            this.multimédiaToolStripMenuItem,
+            this.texteToolStripMenuItem});
+            this.ouvrirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ouvrirToolStripMenuItem.Image")));
+            this.ouvrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
+            this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.ouvrirToolStripMenuItem.Text = "&Ajouter un document...";
+            // 
+            // audioToolStripMenuItem
+            // 
+            this.audioToolStripMenuItem.Name = "audioToolStripMenuItem";
+            this.audioToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.audioToolStripMenuItem.Text = "Audio";
+            this.audioToolStripMenuItem.Click += new System.EventHandler(this.audioToolStripMenuItem_Click);
+            // 
+            // vidéoToolStripMenuItem
+            // 
+            this.vidéoToolStripMenuItem.Name = "vidéoToolStripMenuItem";
+            this.vidéoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.vidéoToolStripMenuItem.Text = "Vidéo";
+            this.vidéoToolStripMenuItem.Click += new System.EventHandler(this.vidéoToolStripMenuItem_Click);
+            // 
+            // multimédiaToolStripMenuItem
+            // 
+            this.multimédiaToolStripMenuItem.Name = "multimédiaToolStripMenuItem";
+            this.multimédiaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.multimédiaToolStripMenuItem.Text = "Multimédia";
+            this.multimédiaToolStripMenuItem.Click += new System.EventHandler(this.multimédiaToolStripMenuItem_Click);
+            // 
+            // texteToolStripMenuItem
+            // 
+            this.texteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.articleToolStripMenuItem,
+            this.livreToolStripMenuItem});
+            this.texteToolStripMenuItem.Name = "texteToolStripMenuItem";
+            this.texteToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.texteToolStripMenuItem.Text = "Texte";
+            // 
+            // articleToolStripMenuItem
+            // 
+            this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
+            this.articleToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.articleToolStripMenuItem.Text = "Article";
+            this.articleToolStripMenuItem.Click += new System.EventHandler(this.articleToolStripMenuItem_Click);
+            // 
+            // livreToolStripMenuItem
+            // 
+            this.livreToolStripMenuItem.Name = "livreToolStripMenuItem";
+            this.livreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.livreToolStripMenuItem.Text = "Livre";
+            this.livreToolStripMenuItem.Click += new System.EventHandler(this.livreToolStripMenuItem_Click);
+            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
@@ -249,8 +307,9 @@
             // àproposdeToolStripMenuItem
             // 
             this.àproposdeToolStripMenuItem.Name = "àproposdeToolStripMenuItem";
-            this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.àproposdeToolStripMenuItem.Text = "À &propos de...";
+            this.àproposdeToolStripMenuItem.Click += new System.EventHandler(this.àproposdeToolStripMenuItem_Click);
             // 
             // headerSplitContainer
             // 
@@ -274,10 +333,19 @@
             this.headerSplitContainer.SplitterWidth = 1;
             this.headerSplitContainer.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::View.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(473, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(18, 20);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(341, 4);
+            this.searchBox.Location = new System.Drawing.Point(344, 4);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(126, 20);
             this.searchBox.TabIndex = 4;
@@ -579,6 +647,7 @@
             // 
             this.documentBindingSource.AllowNew = false;
             this.documentBindingSource.DataSource = typeof(Model.Document);
+            this.documentBindingSource.Filter = "Titre = \'2\'";
             // 
             // titreDataGridViewTextBoxColumn5
             // 
@@ -672,73 +741,6 @@
             this.multimediaBindingSource.AllowNew = false;
             this.multimediaBindingSource.DataSource = typeof(Model.Multimedia);
             // 
-            // ouvrirToolStripMenuItem
-            // 
-            this.ouvrirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.audioToolStripMenuItem,
-            this.vidéoToolStripMenuItem,
-            this.multimédiaToolStripMenuItem,
-            this.texteToolStripMenuItem});
-            this.ouvrirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ouvrirToolStripMenuItem.Image")));
-            this.ouvrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.ouvrirToolStripMenuItem.Text = "&Ajouter un document...";
-            // 
-            // audioToolStripMenuItem
-            // 
-            this.audioToolStripMenuItem.Name = "audioToolStripMenuItem";
-            this.audioToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.audioToolStripMenuItem.Text = "Audio";
-            this.audioToolStripMenuItem.Click += new System.EventHandler(this.audioToolStripMenuItem_Click);
-            // 
-            // vidéoToolStripMenuItem
-            // 
-            this.vidéoToolStripMenuItem.Name = "vidéoToolStripMenuItem";
-            this.vidéoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.vidéoToolStripMenuItem.Text = "Vidéo";
-            this.vidéoToolStripMenuItem.Click += new System.EventHandler(this.vidéoToolStripMenuItem_Click);
-            // 
-            // multimédiaToolStripMenuItem
-            // 
-            this.multimédiaToolStripMenuItem.Name = "multimédiaToolStripMenuItem";
-            this.multimédiaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.multimédiaToolStripMenuItem.Text = "Multimédia";
-            this.multimédiaToolStripMenuItem.Click += new System.EventHandler(this.multimédiaToolStripMenuItem_Click);
-            // 
-            // texteToolStripMenuItem
-            // 
-            this.texteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.articleToolStripMenuItem,
-            this.livreToolStripMenuItem});
-            this.texteToolStripMenuItem.Name = "texteToolStripMenuItem";
-            this.texteToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.texteToolStripMenuItem.Text = "Texte";
-            // 
-            // articleToolStripMenuItem
-            // 
-            this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
-            this.articleToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.articleToolStripMenuItem.Text = "Article";
-            this.articleToolStripMenuItem.Click += new System.EventHandler(this.articleToolStripMenuItem_Click);
-            // 
-            // livreToolStripMenuItem
-            // 
-            this.livreToolStripMenuItem.Name = "livreToolStripMenuItem";
-            this.livreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.livreToolStripMenuItem.Text = "Livre";
-            this.livreToolStripMenuItem.Click += new System.EventHandler(this.livreToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::View.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(473, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(18, 20);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -759,6 +761,7 @@
             this.headerSplitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerSplitContainer)).EndInit();
             this.headerSplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.allPage.ResumeLayout(false);
             this.allSplitContainer.Panel1.ResumeLayout(false);
@@ -790,7 +793,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.texteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.multimediaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

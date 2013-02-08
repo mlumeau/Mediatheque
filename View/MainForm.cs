@@ -181,8 +181,7 @@ namespace View
             videoBindingSource.DataSource = m.GetDocuments<Video>();
             texteBindingSource.DataSource = m.GetDocuments<Texte>();
             multimediaBindingSource.DataSource = m.GetDocuments<Multimedia>();
-            
-            
+
 
             m.Sauvegarder();
         }
@@ -361,7 +360,16 @@ namespace View
         {
             if (searchBox.Text != "")
             {
-                documentBindingSource.Filter = "titre LIKE '%" + searchBox.Text + "%' OR auteur LIKE '%" + searchBox.Text + "%'";
+                BindingSource searchBindingSource = new BindingSource();
+
+                IEnumerable<Document> res = from doc in m.GetDocuments<Document>()
+                                     where doc.auteur.Contains(searchBox.Text)
+                                        || doc.titre.Contains(searchBox.Text)
+                                     select doc;
+
+                searchBindingSource.DataSource = res.ToList<Document>();
+
+                allGridView.DataSource = searchBindingSource;
 
                 tabControl.SelectedTab = allPage;
 
@@ -369,8 +377,13 @@ namespace View
             }
             else
             {
-                documentBindingSource.Filter = null;
+                allGridView.DataSource = documentBindingSource;
             }
+        }
+
+        private void àproposdeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Application développée par Maxime Lumeau et Mathieu Pédoussaut.\n © 2013 GrumpyCorp Ltd. All rights reserved.","Médiathèque", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
     }
 }

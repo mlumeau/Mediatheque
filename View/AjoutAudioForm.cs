@@ -43,19 +43,32 @@ namespace View
 
         private void validerButton_Click(object sender, EventArgs e)
         {
-            if (titreTextBox.Text == "" || auteurTextBox.Text == "")
+            if (titreTextBox.Text == "" || auteurTextBox.Text == "" || cheminTextBox.Text =="")
             {
                 MessageBox.Show("Veuillez remplir tous les champs correctement.");
             }
             else
             {
                 Audio aud = new Audio(titreTextBox.Text, auteurTextBox.Text, cheminTextBox.Text, copyrightCheckBox.Checked);
-
-                ctrl.mediatheque.Ajouter(aud);
-
-                ctrl.mainform.refreshLists();
-
-                this.Close();
+                bool found = false;
+                foreach (Document d in ctrl.mediatheque.GetDocuments<Audio>())
+                {
+                    if (aud.path == d.path)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                {
+                    ctrl.mediatheque.Ajouter(aud);
+                    ctrl.mainform.refreshLists();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ce fichier est déjà présent dans la médiathèque.");
+                }
             }
         }
     }
