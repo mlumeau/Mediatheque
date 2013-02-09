@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 namespace Model
 {
     public class Texte : Document, Imprimable
@@ -21,7 +21,7 @@ namespace Model
 
         public void Print()
         {
-
+            MessageBox.Show("Document imprimé !");
         }
     }
 }

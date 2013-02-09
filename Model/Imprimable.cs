@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 
 namespace Model
 {
     interface Imprimable
     {
-        void Print()
-        {
-            MessageBox.Show("Document imprimé !");
-        }
+        void Print();
     }
 }

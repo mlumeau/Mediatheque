@@ -48,22 +48,22 @@ namespace Model
             return documents.OfType<T>().ToList(); 
         }
 
-        public IEnumerable<T> GetDocumentsByAuteur<T>() where T : Document
+        public List<T> GetDocumentsByAuteur<T>() where T : Document
         {
             var res = from doc in GetDocuments<T>()
                       orderby doc.auteur
                       select doc;
 
-            return res;
+            return res.ToList();
         }
 
-        public IEnumerable<T> GetDocumentsByTitre<T>() where T : Document
+        public List<T> GetDocumentsByTitre<T>() where T : Document
         {
             var res = from doc in GetDocuments<T>()
                       orderby doc.titre
                       select doc;
 
-            return res;
+            return res.ToList();
         }
 
         public void Sauvegarder(string filename = "mediatheque.dat")

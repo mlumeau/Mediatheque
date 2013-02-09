@@ -385,5 +385,80 @@ namespace View
         {
             MessageBox.Show("Application développée par Maxime Lumeau et Mathieu Pédoussaut.\n © 2013 GrumpyCorp Ltd. All rights reserved.","Médiathèque", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
+
+        private void allGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                if (e.ColumnIndex == 0)
+                {
+                    documentBindingSource.DataSource = m.GetDocumentsByTitre<Document>();
+                }
+                if (e.ColumnIndex == 1)
+                {
+                    documentBindingSource.DataSource = m.GetDocumentsByAuteur<Document>();
+                }
+            } 
+        }
+
+        private void audioGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                if (e.ColumnIndex == 0)
+                {
+                   audioBindingSource.DataSource = m.GetDocumentsByTitre<Audio>();
+                }
+                if (e.ColumnIndex == 1)
+                {
+                    audioBindingSource.DataSource = m.GetDocumentsByAuteur<Audio>();
+                }
+            }
+        }
+
+        private void videoGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                if (e.ColumnIndex == 0)
+                {
+                    videoBindingSource.DataSource = m.GetDocumentsByTitre<Video>();
+                }
+                if (e.ColumnIndex == 1)
+                {
+                    videoBindingSource.DataSource = m.GetDocumentsByAuteur<Video>();
+                }
+            }
+        }
+
+        private void textGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                if (e.ColumnIndex == 0)
+                {
+                    texteBindingSource.DataSource = m.GetDocumentsByTitre<Texte>();
+                }
+                if (e.ColumnIndex == 1)
+                {
+                    texteBindingSource.DataSource = m.GetDocumentsByAuteur<Texte>();
+                }
+            }
+        }
+
+        private void mmGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                if (e.ColumnIndex == 0)
+                {
+                   multimediaBindingSource.DataSource = m.GetDocumentsByTitre<Multimedia>();
+                }
+                if (e.ColumnIndex == 1)
+                {
+                    multimediaBindingSource.DataSource = m.GetDocumentsByAuteur<Multimedia>();
+                }
+            }
+        }
     }
 }
