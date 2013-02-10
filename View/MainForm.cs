@@ -436,5 +436,10 @@ namespace View
                 ((Texte)allGridView.SelectedRows[0].DataBoundItem).Print();
             }
         }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
