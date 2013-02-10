@@ -50,7 +50,8 @@ namespace View
                     l.auteur = auteurTextBox.Text;
                     l.editeur = editeurTextBox.Text;
                     l.parution = DateTime.ParseExact(anneeParutionTextBox.Text, "dd'/'MM'/'yyyy", CultureInfo.InvariantCulture);
-
+                    ctrl.mainform.refreshLists();
+                    ctrl.mainform.Refresh();
                     ctrl.mediatheque.Sauvegarder();
 
                     this.Close();

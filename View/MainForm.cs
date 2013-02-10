@@ -103,40 +103,43 @@ namespace View
         {
             if (tabControl.SelectedTab == allPage)
             {
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Article))
+                switch (allGridView.CurrentRow.DataBoundItem.GetType().Name)
                 {
-                    ModifArticleForm f = new ModifArticleForm((Article)allGridView.SelectedRows[0].DataBoundItem, ctrl);
-                    f.ShowDialog();
-                }
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Audio))
-                {
-                    ModifAudioForm f = new ModifAudioForm((Audio)allGridView.SelectedRows[0].DataBoundItem, ctrl);
-                    f.ShowDialog();
-                }
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Livre))
-                {
-                    ModifLivreForm f = new ModifLivreForm((Livre)allGridView.SelectedRows[0].DataBoundItem, ctrl);
-                    f.ShowDialog();
-                }
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Multimedia))
-                {
-                    ModifMMForm f = new ModifMMForm((Multimedia)allGridView.SelectedRows[0].DataBoundItem, ctrl);
-                    f.ShowDialog();
-                }
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Video))
-                {
-                    ModifVideoForm f = new ModifVideoForm((Video)allGridView.SelectedRows[0].DataBoundItem, ctrl);
-                    f.ShowDialog();
+                    case "Article" : 
+                        ModifArticleForm f = new ModifArticleForm((Article)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                        f.ShowDialog();
+                        break;
+
+                    case "Audio" :
+                        ModifAudioForm f2 = new ModifAudioForm((Audio)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                        f2.ShowDialog();
+                        break;
+
+                    case "Livre" : 
+                        ModifLivreForm f3 = new ModifLivreForm((Livre)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                        f3.ShowDialog();
+                        break;
+
+                    case "Multimedia" :
+                        ModifMMForm f4 = new ModifMMForm((Multimedia)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                        f4.ShowDialog();
+                        break;
+
+                    case "Video" : 
+                        ModifVideoForm f5 = new ModifVideoForm((Video)allGridView.SelectedRows[0].DataBoundItem, ctrl);
+                        f5.ShowDialog();
+                        break;
                 }
             }
+
             if (tabControl.SelectedTab == textPage)
             {
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Article))
+                if (textGridView.CurrentRow.DataBoundItem.GetType() == typeof(Article))
                 {
                     ModifArticleForm f = new ModifArticleForm((Article)textGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Livre))
+                else if (allGridView.CurrentRow.DataBoundItem.GetType() == typeof(Livre))
                 {
                     ModifLivreForm f = new ModifLivreForm((Livre)textGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
@@ -144,7 +147,7 @@ namespace View
             }
             if (tabControl.SelectedTab == audioPage)
             {
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Audio))
+                if (audioGridView.CurrentRow.DataBoundItem.GetType() == typeof(Audio))
                 {
                     ModifAudioForm f = new ModifAudioForm((Audio)audioGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
@@ -152,7 +155,7 @@ namespace View
             }
             if (tabControl.SelectedTab == mmPage)
             {
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Multimedia))
+                if (mmGridView.CurrentRow.DataBoundItem.GetType() == typeof(Multimedia))
                 {
                     ModifMMForm f = new ModifMMForm((Multimedia)mmGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
@@ -160,13 +163,14 @@ namespace View
             }
             if (tabControl.SelectedTab == videoPage)
             {
-                if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Video))
+                if (videoGridView.CurrentRow.DataBoundItem.GetType() == typeof(Video))
                 {
                     ModifVideoForm f = new ModifVideoForm((Video)videoGridView.SelectedRows[0].DataBoundItem, ctrl);
                     f.ShowDialog();
                 }
             }
         }
+
 
         public void refreshLists()
         {
@@ -184,6 +188,20 @@ namespace View
 
 
             m.Sauvegarder();
+        }
+
+        public void refreshInfo(DataGridView grid, Panel panel)
+        {
+            if (grid.CurrentRow != null)
+            {
+                Label text = new Label();
+                text.AutoSize = true;
+                text.Font = new Font("Courier New", text.Font.Size);
+                Document d = (Document)grid.CurrentRow.DataBoundItem;
+                text.Text = d.Afficher();
+                panel.Controls.Add(text);
+                panel.Refresh();
+            }
         }
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -214,85 +232,35 @@ namespace View
         private void allGridView_SelectionChanged(object sender, EventArgs e)
         {
             allSplitContainer.Panel2.Controls.Clear();
-
-            if (allGridView.CurrentRow != null)
-            {
-                
-                Label text = new Label();
-                text.AutoSize = true;
-                text.Font = new Font("Courier New", text.Font.Size);
-                Document d = (Document)allGridView.CurrentRow.DataBoundItem;
-                text.Text = d.Afficher();
-                allSplitContainer.Panel2.Controls.Add(text);
-                allSplitContainer.Panel2.Refresh();
-            }
+            refreshInfo(allGridView, allSplitContainer.Panel2);
         }
 
         private void audioGridView_SelectionChanged(object sender, EventArgs e)
         {
             audioSplitContainer.Panel2.Controls.Clear();
 
-            if (ctrl.mediatheque.GetDocuments<Audio>().Count() > 0 && audioGridView.CurrentRow != null)
-            {
-                
-                Label text = new Label();
-                text.AutoSize = true;
-                text.Font = new Font("Courier New", text.Font.Size);
-                Document d = (Document)audioGridView.CurrentRow.DataBoundItem;
-                text.Text = d.Afficher();
-                audioSplitContainer.Panel2.Controls.Add(text);
-                audioSplitContainer.Panel2.Refresh();
-            }
+            refreshInfo(audioGridView, audioSplitContainer.Panel2);
         }
 
         private void videoGridView_SelectionChanged(object sender, EventArgs e)
         {
             videoSplitContainer.Panel2.Controls.Clear();
 
-            if (ctrl.mediatheque.GetDocuments<Video>().Count() > 0 && videoGridView.CurrentRow != null)
-            {
-                
-                Label text = new Label();
-                text.AutoSize = true;
-                text.Font = new Font("Courier New", text.Font.Size);
-                Document d = (Document)videoGridView.CurrentRow.DataBoundItem;
-                text.Text = d.Afficher();
-                videoSplitContainer.Panel2.Controls.Add(text);
-                videoSplitContainer.Panel2.Refresh();
-            }
+            refreshInfo(videoGridView, videoSplitContainer.Panel2);
         }
 
         private void textGridView_SelectionChanged(object sender, EventArgs e)
         {
             textSplitContainer.Panel2.Controls.Clear();
 
-            if (ctrl.mediatheque.GetDocuments<Texte>().Count() > 0 && textGridView.CurrentRow != null)
-            {
-                Label text = new Label();
-                text.AutoSize = true;
-                text.Font = new Font("Courier New", text.Font.Size);
-                Document d = (Document)textGridView.CurrentRow.DataBoundItem;
-                text.Text = d.Afficher();
-                textSplitContainer.Panel2.Controls.Add(text);
-                textSplitContainer.Panel2.Refresh();
-            }
+            refreshInfo(textGridView, textSplitContainer.Panel2);
         }
 
         private void mmGridView_SelectionChanged(object sender, EventArgs e)
         {
             mmSplitContainer.Panel2.Controls.Clear();
 
-            if (ctrl.mediatheque.GetDocuments<Multimedia>().Count() > 0 && mmGridView.CurrentRow != null)
-            {
-                
-                Label text = new Label();
-                text.AutoSize = true;
-                text.Font = new Font("Courier New", text.Font.Size);
-                Document d = (Document)mmGridView.CurrentRow.DataBoundItem;
-                text.Text = d.Afficher();
-                textSplitContainer.Panel2.Controls.Add(text);
-                textSplitContainer.Panel2.Refresh();
-            }
+            refreshInfo(audioGridView, mmSplitContainer.Panel2);
         }
 
 

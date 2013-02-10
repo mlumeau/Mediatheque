@@ -46,9 +46,10 @@ namespace View
                 art.auteur = auteurTextBox.Text;
                 art.editeur = editeurTextBox.Text;
                 art.numEdition = numEditionTextBox.Text;
-
+                ctrl.mainform.refreshLists();
+                ctrl.mainform.Refresh();
                 ctrl.mediatheque.Sauvegarder();
-
+                
                 this.Close();
             }
         }

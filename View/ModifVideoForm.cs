@@ -43,7 +43,7 @@ namespace View
             {
                 v.titre = titreTextBox.Text;
                 v.auteur = auteurTextBox.Text;
-
+                ctrl.mainform.refreshLists();
                 ctrl.mediatheque.Sauvegarder();
 
                 this.Close();
