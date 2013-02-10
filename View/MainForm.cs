@@ -363,8 +363,8 @@ namespace View
                 BindingSource searchBindingSource = new BindingSource();
 
                 IEnumerable<Document> res = from doc in m.GetDocuments<Document>()
-                                     where doc.auteur.Contains(searchBox.Text)
-                                        || doc.titre.Contains(searchBox.Text)
+                                     where doc.auteur.ToLower().Contains(searchBox.Text.ToLower())
+                                        || doc.titre.ToLower().Contains(searchBox.Text.ToLower())
                                      select doc;
 
                 searchBindingSource.DataSource = res.ToList<Document>();
