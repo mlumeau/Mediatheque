@@ -460,5 +460,13 @@ namespace View
                 }
             }
         }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Article) || allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Livre))
+            {
+                ((Texte)allGridView.SelectedRows[0].DataBoundItem).Print();
+            }
+        }
     }
 }
