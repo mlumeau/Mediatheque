@@ -206,6 +206,7 @@ namespace View
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             if (tabControl.SelectedTab == allPage)
             {
                 m.Supprimer((Document)allGridView.SelectedRows[0].DataBoundItem);
@@ -260,7 +261,7 @@ namespace View
         {
             mmSplitContainer.Panel2.Controls.Clear();
 
-            refreshInfo(audioGridView, mmSplitContainer.Panel2);
+            refreshInfo(mmGridView, mmSplitContainer.Panel2);
         }
 
 
@@ -431,15 +432,141 @@ namespace View
 
         private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Article) || allGridView.SelectedRows[0].DataBoundItem.GetType() == typeof(Livre))
-            {
-                ((Texte)allGridView.SelectedRows[0].DataBoundItem).Print();
-            }
+            ((Imprimable)allGridView.SelectedRows[0].DataBoundItem).Print();
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void editionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tabControl.SelectedTab == allPage)
+            {
+                if (allGridView.CurrentRow == null)
+                {
+                    supprimerToolStripMenuItem.Enabled = false;
+                    modifierToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    supprimerToolStripMenuItem.Enabled = true;
+                    modifierToolStripMenuItem.Enabled = true;
+                }
+            }
+            else if (tabControl.SelectedTab == textPage)
+            {
+                if (textGridView.CurrentRow == null)
+                {
+                    supprimerToolStripMenuItem.Enabled = false;
+                    modifierToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    supprimerToolStripMenuItem.Enabled = true;
+                    modifierToolStripMenuItem.Enabled = true;
+                }
+            }
+            else if (tabControl.SelectedTab == audioPage)
+            {
+                if (audioGridView.CurrentRow == null)
+                {
+                    supprimerToolStripMenuItem.Enabled = false;
+                    modifierToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    supprimerToolStripMenuItem.Enabled = true;
+                    modifierToolStripMenuItem.Enabled = true;
+                }
+            }
+            else if (tabControl.SelectedTab == mmPage)
+            {
+                if (mmGridView.CurrentRow == null)
+                {
+                    supprimerToolStripMenuItem.Enabled = false;
+                    modifierToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    supprimerToolStripMenuItem.Enabled = true;
+                    modifierToolStripMenuItem.Enabled = true;
+                }
+            }
+            else if (tabControl.SelectedTab == videoPage)
+            {
+                if (videoGridView.CurrentRow == null)
+                {
+                    supprimerToolStripMenuItem.Enabled = false;
+                    modifierToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    supprimerToolStripMenuItem.Enabled = true;
+                    modifierToolStripMenuItem.Enabled = true;
+                }
+            }
+           
+        }
+
+        private void outilsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tabControl.SelectedTab == allPage)
+            {
+                if (allGridView.CurrentRow == null)
+                {
+                    optionsToolStripMenuItem.Enabled = false;
+                }
+                else if (allGridView.CurrentRow.DataBoundItem is Imprimable)
+                {
+                    optionsToolStripMenuItem.Enabled = true;
+                }
+            }
+            else if (tabControl.SelectedTab == textPage)
+            {
+                if (textGridView.CurrentRow == null)
+                {
+                    optionsToolStripMenuItem.Enabled = false;
+                }
+                else if (textGridView.CurrentRow.DataBoundItem is Imprimable)
+                {
+                    optionsToolStripMenuItem.Enabled = true;
+                }
+            }
+            else if (tabControl.SelectedTab == audioPage)
+            {
+                if (audioGridView.CurrentRow == null)
+                {
+                    optionsToolStripMenuItem.Enabled = false;
+                }
+                else if (audioGridView.CurrentRow.DataBoundItem is Imprimable)
+                {
+                    optionsToolStripMenuItem.Enabled = true;
+                }
+            }
+            else if (tabControl.SelectedTab == mmPage)
+            {
+                if (mmGridView.CurrentRow == null)
+                {
+                    optionsToolStripMenuItem.Enabled = false;
+                }
+                else if (mmGridView.CurrentRow.DataBoundItem is Imprimable)
+                {
+                    optionsToolStripMenuItem.Enabled = true;
+                }
+            }
+            else if (tabControl.SelectedTab == videoPage)
+            {
+                if (videoGridView.CurrentRow == null)
+                {
+                    optionsToolStripMenuItem.Enabled = false;
+                }
+                else if (videoGridView.CurrentRow.DataBoundItem is Imprimable)
+                {
+                    optionsToolStripMenuItem.Enabled = true;
+                }
+            }
         }
     }
 }

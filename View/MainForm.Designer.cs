@@ -268,6 +268,7 @@
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
             this.editionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.editionToolStripMenuItem.Text = "&Edition";
+            this.editionToolStripMenuItem.Click += new System.EventHandler(this.editionToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
@@ -292,6 +293,7 @@
             this.outilsToolStripMenuItem.Name = "outilsToolStripMenuItem";
             this.outilsToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.outilsToolStripMenuItem.Text = "&Outils";
+            this.outilsToolStripMenuItem.Click += new System.EventHandler(this.outilsToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
@@ -341,7 +343,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::View.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(482, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(485, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(18, 20);
             this.pictureBox1.TabIndex = 5;
@@ -350,7 +352,7 @@
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(353, 4);
+            this.searchBox.Location = new System.Drawing.Point(356, 4);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(126, 20);
             this.searchBox.TabIndex = 4;

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Model
 {
-    interface Imprimable
+    public interface Imprimable
     {
         void Print();
     }

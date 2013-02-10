@@ -17,6 +17,17 @@ namespace Model
         public override string Afficher()
         {
             string res = "";
+            TagLib.File f = TagLib.File.Create(this.path);
+            if (f.Tag != null)
+            {
+                res = "";
+
+                if (f.Tag.Title != null)
+                    res += "Titre         : " + f.Tag.Title + "\n";
+
+                res += "Durée         : " + f.Properties.Duration.ToString(@"hh\:mm\:ss") + "\n" +
+                       "Résolution    : " + f.Properties.VideoWidth + "x" + f.Properties.VideoHeight + "\n";
+            }
             return res;
         }
 
