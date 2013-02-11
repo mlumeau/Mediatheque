@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.editeurLabel = new System.Windows.Forms.Label();
+            this.copyrightCheckBox = new System.Windows.Forms.CheckBox();
             this.cheminTitleLabel = new System.Windows.Forms.Label();
             this.titreLabel = new System.Windows.Forms.Label();
             this.auteurLabel = new System.Windows.Forms.Label();
@@ -38,14 +39,13 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cheminTextBox = new System.Windows.Forms.TextBox();
             this.parcourirButton = new System.Windows.Forms.Button();
-            this.anneeParutionTextBox = new System.Windows.Forms.TextBox();
             this.anneeParutionLabel = new System.Windows.Forms.Label();
+            this.editeurTextBox = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.validerButton = new System.Windows.Forms.Button();
             this.annulerButton = new System.Windows.Forms.Button();
-            this.editeurTextBox = new System.Windows.Forms.TextBox();
+            this.anneeParutionTextBox = new System.Windows.Forms.TextBox();
             this.openLivreFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.copyrightCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -102,6 +102,16 @@
             this.editeurLabel.TabIndex = 10;
             this.editeurLabel.Text = "Éditeur";
             this.editeurLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // copyrightCheckBox
+            // 
+            this.copyrightCheckBox.AutoSize = true;
+            this.copyrightCheckBox.Location = new System.Drawing.Point(3, 228);
+            this.copyrightCheckBox.Name = "copyrightCheckBox";
+            this.copyrightCheckBox.Size = new System.Drawing.Size(73, 17);
+            this.copyrightCheckBox.TabIndex = 19;
+            this.copyrightCheckBox.Text = " Copyright";
+            this.copyrightCheckBox.UseVisualStyleBackColor = true;
             // 
             // cheminTitleLabel
             // 
@@ -166,7 +176,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.parcourirButton);
             this.splitContainer1.Size = new System.Drawing.Size(278, 25);
-            this.splitContainer1.SplitterDistance = 205;
+            this.splitContainer1.SplitterDistance = 207;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -178,7 +188,7 @@
             this.cheminTextBox.Location = new System.Drawing.Point(3, 2);
             this.cheminTextBox.Name = "cheminTextBox";
             this.cheminTextBox.ReadOnly = true;
-            this.cheminTextBox.Size = new System.Drawing.Size(200, 20);
+            this.cheminTextBox.Size = new System.Drawing.Size(202, 20);
             this.cheminTextBox.TabIndex = 2;
             // 
             // parcourirButton
@@ -191,23 +201,23 @@
             this.parcourirButton.UseVisualStyleBackColor = true;
             this.parcourirButton.Click += new System.EventHandler(this.parcourirButton_Click);
             // 
-            // anneeParutionTextBox
-            // 
-            this.anneeParutionTextBox.Location = new System.Drawing.Point(3, 198);
-            this.anneeParutionTextBox.Name = "anneeParutionTextBox";
-            this.anneeParutionTextBox.Size = new System.Drawing.Size(278, 20);
-            this.anneeParutionTextBox.TabIndex = 11;
-            // 
             // anneeParutionLabel
             // 
             this.anneeParutionLabel.AutoSize = true;
             this.anneeParutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.anneeParutionLabel.Location = new System.Drawing.Point(3, 180);
             this.anneeParutionLabel.Name = "anneeParutionLabel";
-            this.anneeParutionLabel.Size = new System.Drawing.Size(96, 12);
+            this.anneeParutionLabel.Size = new System.Drawing.Size(155, 12);
             this.anneeParutionLabel.TabIndex = 12;
-            this.anneeParutionLabel.Text = "Année de parution";
+            this.anneeParutionLabel.Text = "Date de parution (jj/mm/aaaa)";
             this.anneeParutionLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // editeurTextBox
+            // 
+            this.editeurTextBox.Location = new System.Drawing.Point(3, 153);
+            this.editeurTextBox.Name = "editeurTextBox";
+            this.editeurTextBox.Size = new System.Drawing.Size(278, 20);
+            this.editeurTextBox.TabIndex = 13;
             // 
             // splitContainer2
             // 
@@ -241,7 +251,7 @@
             // annulerButton
             // 
             this.annulerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.annulerButton.Location = new System.Drawing.Point(35, 3);
+            this.annulerButton.Location = new System.Drawing.Point(36, 3);
             this.annulerButton.Name = "annulerButton";
             this.annulerButton.Size = new System.Drawing.Size(82, 26);
             this.annulerButton.TabIndex = 1;
@@ -249,28 +259,18 @@
             this.annulerButton.UseVisualStyleBackColor = true;
             this.annulerButton.Click += new System.EventHandler(this.annulerButton_Click);
             // 
-            // editeurTextBox
+            // anneeParutionTextBox
             // 
-            this.editeurTextBox.Location = new System.Drawing.Point(3, 153);
-            this.editeurTextBox.Name = "editeurTextBox";
-            this.editeurTextBox.Size = new System.Drawing.Size(278, 20);
-            this.editeurTextBox.TabIndex = 13;
+            this.anneeParutionTextBox.Location = new System.Drawing.Point(3, 198);
+            this.anneeParutionTextBox.Name = "anneeParutionTextBox";
+            this.anneeParutionTextBox.Size = new System.Drawing.Size(278, 20);
+            this.anneeParutionTextBox.TabIndex = 11;
             // 
             // openLivreFileDialog
             // 
             this.openLivreFileDialog.Filter = "Fichiers PDF|*.pdf|Fichiers Word 97-03|*.doc|Fichiers Word 07|*.docx|Fichiers EPU" +
     "B|*.epub";
             this.openLivreFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openLivreFileDialog_FileOk);
-            // 
-            // copyrightCheckBox
-            // 
-            this.copyrightCheckBox.AutoSize = true;
-            this.copyrightCheckBox.Location = new System.Drawing.Point(3, 228);
-            this.copyrightCheckBox.Name = "copyrightCheckBox";
-            this.copyrightCheckBox.Size = new System.Drawing.Size(73, 17);
-            this.copyrightCheckBox.TabIndex = 19;
-            this.copyrightCheckBox.Text = " Copyright";
-            this.copyrightCheckBox.UseVisualStyleBackColor = true;
             // 
             // AjoutLivreForm
             // 
